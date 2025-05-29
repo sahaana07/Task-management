@@ -2,129 +2,145 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content=
-		"width=device-width, initial-scale=1.0" />
-	<link rel="stylesheet" href="assests/assests/css/main.css" />
-    <link rel="stylesheet" href="assests/assests/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-	<title>
-		Sidebar
-	</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="assests/assests/css/main.css" />
+  <link rel="stylesheet" href="assests/assests/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+
+  <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="assests/assests/css/header.css" />
+  <link rel="stylesheet" href="assests/assests/css/sidebar.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
+  <title>Sidebar</title>
+  
 </head>
 
 <body>
-     <nav class="navbar sticky-top navbar-expand-lg navbar-dark custom-navbar nav" >
-        <div class="container-fluid">
-            <a href="#" class="navbar-brand">Task-View</a>
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav">
 
-                    <a href="#" class="nav-item nav-link active me-lg-4" onclick="showContent('boardview') " >Board</a>  
-                    <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Listview')" ><i class="fa-solid fa-list me-2"></i>List</a>
-                    <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Timeline')" ><i class="fa-solid fa-timeline me-2"></i>Timeline</a>
-                </div>
-                
-
- 
-                
-                
-               
-                <ul class=" navbar-nav ms-auto profile-menu ">
-                   <li class="nav-item dropdown m-lg-3" >
-        <button class="btn  position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" >
-            <i class="fa-solid fa-bell"></i>
-            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                99+
-                <span class="visually-hidden">unread messages</span>
-            </span>
-        </button>
-
-        <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
-            <li class="notification-ui_dd-header text-center fw-bold">Notifications</li>
-            <li class="notification-ui_dd-content">
-               <li></li>
-            </li>
-            <li class="notification-ui_dd-footer">
-                <a href="#" class="btn btn-success w-100">View All</a>
-            </li>
-        </ul>
-    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLg" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <div class="profile-pic">
-                                <img src="./images/profile.png" alt="Profile Picture">
-                            </div>
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownLg">
-                            <li><a class="dropdown-item" href="#">Account</a></li>
-                            <li><a class="dropdown-item" href="#">Settings</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Log Out</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark nav">
     <div class="container-fluid">
-	<div id="sideMenu" class="sideMenu">
-		<a href="#"
-			class="closeBtn"
-			onclick="closeNav()">×</a>
-		<div class="mainMenu">
-            <div style="padding-bottom: 70px;">
-			<h3>Filters</h3>
-			<a href="#" class="colour"
-				onclick="showContent('Team Progress')">Team Progress</a>
-			<a href="#" class="colour"
-				onclick="showContent('Assignee')">Assignee</a>
-			<a href="#" class="colour"
-				onclick="showContent('Priority')">Priority</a>
-			<a href="#" class="colour"
-				onclick="showContent('Subtasks Status')">Subtasks Status</a>
-            <div class="dropdown" data-bs-theme="dark">
-			<a class="nav-link dropdown-toggle colour " style="padding: 0 0;padding-left: 25px;" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Due Date</a>
-                <ul class="dropdown-menu dropdown-menu-dark col " style="padding: 0px;text-align: left;" aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item " href="#" onclick="showContent('Today')">Today</a></li>
-                    <li><a class="dropdown-item " href="#" onclick="showContent('Tomorrow')">Tomorrow</a></li>
-                    <li><a class="dropdown-item " href="#" onclick="showContent('Overdue')">Overdue</a></li>
-                </ul>
-            </div>
-            </div>
-            <div>
-            <h3>Overall Progress</h3>
-                <div class="programming-stats">
-                    <div class="chart-container">
-                        <canvas class="myChart" width="200" height="200"></canvas>
-                         <div id="chartCenterText">Progress</div>
-                    </div>
-                </div>
-            </div>
-		</div>
-	</div>
-	
-	<div id="contentArea">
-		<span style="font-size: 30px; cursor: pointer"
-			onclick="openNav()">☰</span>
-		<div class="contentText">
-			<h2 id="contentTitle">Sidebar</h2>
-		</div>
-	</div>
-    
-    <script src="assests/assests/js/bootstrap.bundle.min.js"></script>
-	<script src="assests/assests/js/main.js"></script>
+      <a href="#" class="navbar-brand">Task-View</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="#" class="nav-item nav-link active me-lg-4" onclick="showContent('boardview', this)">Board</a>
+          <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Listview', this)">
+            <i class="fa-solid fa-list"></i>List</a>
+          <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Timeline', this)">
+            <i class="fa-solid fa-clock"></i>Timeline</a>
+        </div>
+
+        <ul class="navbar-nav ms-auto profile-menu">
+          <li class="nav-item dropdown m-lg-3">
+            <button class="btn position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-bell"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
+            </button>
+            <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
+              <li class="notification-ui_dd-header text-center fw-bold">Notifications</li>
+              <li class="notification-ui_dd-content">
+               
+              </li>
+              <li class="notification-ui_dd-footer">
+                <a href="#" class="btn btn-success w-100">View All</a>
+              </li>
+            </ul>
+          </li>
+
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownLg" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./images/profile pic.jpg" alt="Profile Picture" class="rounded-circle" width="35" height="35" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLg">
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Log Out</a></li>
+            </ul>
+          </li>
+      
+
+        </ul>
+      </div>
     </div>
+  </nav>
+
+  <div id="sideMenu" class="sideMenu">
+    <a href="#" class="closeBtn" onclick="closeNav()">×</a>
+    <div class="mainMenu">
+      <div style="padding-bottom: 70px;">
+        <h3>Filters</h3>
+        <a href="#" class="colour" onclick="showFilters('Team Progress')">Team Progress</a>
+        <a href="#" class="colour" onclick="showFilters('Assignee')">Assignee</a>
+        <a href="#" class="colour" onclick="showFilters('Priority')">Priority</a>
+        <a href="#" class="colour" onclick="showFilters('Subtasks Status')">Subtasks Status</a>
+
+        <div class="dropdown" data-bs-theme="dark">
+          <a class="nav-link dropdown-toggle colour" style="padding: 0 0; padding-left: 25px;" href="#"
+            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Due Date
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark col" style="padding: 0px; text-align: left;"
+            aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#" onclick="showContent('Today')">Today</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Tomorrow')">Tomorrow</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Overdue')">Overdue</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div>
+        <h3>Overall Progress</h3>
+        <div class="programming-stats">
+          <div class="chart-container">
+            <canvas class="myChart" width="200" height="200"></canvas>
+            <div id="chartCenterText">Progress</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="contentArea">
+    <span style="font-size: 30px; cursor: pointer" onclick="openNav()">☰</span>
+    <div class="contentText">
+      <h2 id="contentTitle">Sidebar</h2>
+      <div id="boardview" class="page-content" style="display:none;">
+        <p>This is the Board view content.</p>
+      </div>
+      <div id="Listview" class="page-content" style="display:none;">
+        <p>This is the List view content.</p>
+      </div>
+      <div id="Timeline" class="page-content" style="display:none;">
+        <p>This is the Timeline content.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="assests/assests/js/bootstrap.bundle.min.js"></script>
+  <script src="assests/assests/js/main.js"></script>
+  <script src="assests/assests/js/sidebar.js"></script>
+  <script src="assests/assests/js/header.js"></script>
+
 </body>
 
 </html>
