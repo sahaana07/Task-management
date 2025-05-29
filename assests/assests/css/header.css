@@ -108,7 +108,12 @@
     left: auto !important;
   }
 }
-
+@media (max-width: 425px) {
+  .alltasks {
+    display: flex;
+    flex-direction: column;
+  }
+}
  
 .notification-ui_dd:after {
     content: "";
@@ -197,6 +202,7 @@
 }
 .nav{
     background: linear-gradient(to bottom, #0a0f2c, #03243b);
+    
 }
  .navbar-nav .nav-link i {
       margin-right: 6px;
@@ -212,3 +218,23 @@
         gap: 1rem;
       }
     }
+.alltasks{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+   background: #03243b;
+    
+}
+.search-button{
+   display: flex;
+}
+.buttoncol{
+    background: #616b9b;
+    border: none;
+}
+.buttoncol:hover{
+    color: white;
+}
+.addbutton{
+    padding-left: 20px;
+}
