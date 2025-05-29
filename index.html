@@ -1,8 +1,74 @@
-<html>
-    <title>
-        Head
-    </title>
-    <body>
-        <h1>Welcome home</h1>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0" />
+	<link rel="stylesheet" href="assests/assests/css/main.css" />
+    <link rel="stylesheet" href="assests/assests/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+	<title>
+		Sidebar
+	</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+	<div id="sideMenu" class="sideMenu">
+		<a href="#"
+			class="closeBtn"
+			onclick="closeNav()">×</a>
+		<div class="mainMenu">
+            <div style="padding-bottom: 70px;">
+			<h3>Filters</h3>
+			<a href="#" class="colour"
+				onclick="showContent('Team Progress')">Team Progress</a>
+			<a href="#" class="colour"
+				onclick="showContent('Assignee')">Assignee</a>
+			<a href="#" class="colour"
+				onclick="showContent('Priority')">Priority</a>
+			<a href="#" class="colour"
+				onclick="showContent('Subtasks Status')">Subtasks Status</a>
+            <div class="dropdown" data-bs-theme="dark">
+			<a class="nav-link dropdown-toggle colour " style="padding: 0 0;padding-left: 25px;" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Due Date</a>
+                <ul class="dropdown-menu dropdown-menu-dark col " style="padding: 0px;text-align: left;" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li><a class="dropdown-item " href="#" onclick="showContent('Today')">Today</a></li>
+                    <li><a class="dropdown-item " href="#" onclick="showContent('Tomorrow')">Tomorrow</a></li>
+                    <li><a class="dropdown-item " href="#" onclick="showContent('Overdue')">Overdue</a></li>
+                </ul>
+            </div>
+            </div>
+            <div>
+            <h3>Overall Progress</h3>
+                <div class="programming-stats">
+                    <div class="chart-container">
+                        <canvas class="myChart" width="200" height="200"></canvas>
+                         <div id="chartCenterText">Progress</div>
+                    </div>
+                </div>
+            </div>
+		</div>
+	</div>
+	
+	<div id="contentArea">
+		<span style="font-size: 30px; cursor: pointer"
+			onclick="openNav()">☰</span>
+		<div class="contentText">
+			<h2 id="contentTitle">Sidebar</h2>
+		</div>
+	</div>
+    
+    <script src="assests/assests/js/bootstrap.bundle.min.js"></script>
+	<script src="assests/assests/js/main.js"></script>
+    </div>
+</body>
+
 </html>
