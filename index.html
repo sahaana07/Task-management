@@ -82,7 +82,34 @@
       </div>
     </div>
   </nav>
+  <div class="alltasks">
+    <div class="dropdown" data-bs-theme="dark">
+          <a class="nav-link dropdown-toggle colour" style="padding: 0 0; padding-left: 25px;font-size: 16px;" href="#"
+            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            All Tasks
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark col" style="padding: 0px; text-align: left;"
+            aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#" >Completed</a></li>
+            <li><a class="dropdown-item" href="#" >To Do</a></li>
+            <li><a class="dropdown-item" href="#" >On Process</a></li>
+          </ul>
+        </div>
+        <div class="search-button">
+        <div class="searchbar">
+        <div class="input-group rounded-pill overflow-hidden">
+            <span class="input-group-text bg-white border-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" class="form-control border-2" placeholder="search">
+        </div>
+        </div>
+        <div class="addbutton">
+            <button class="btn rounded-pill buttoncol" type="button">+ New Task</button>
+        </div>
+        </div>
 
+   </div>
   <div id="sideMenu" class="sideMenu">
     <a href="#" class="closeBtn" onclick="closeNav()">×</a>
     <div class="mainMenu">
@@ -118,7 +145,7 @@
       </div>
     </div>
   </div>
-
+   
   <div id="contentArea">
     <span style="font-size: 30px; cursor: pointer" onclick="openNav()">☰</span>
     <div class="contentText">
