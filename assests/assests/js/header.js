@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       navLinks.forEach(nav => nav.classList.remove('active'));
       this.classList.add('active');
-      document.querySelectorAll('.page-content').forEach(div => {
+      /*document.querySelectorAll('.page-content').forEach(div => {
         div.style.display = 'none';
       });
       const pageId = this.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         title.textContent = this.textContent.trim() + ' Page';
         title.style.display = 'block';
-      }
+      }*/
       const navbarCollapse = document.querySelector('.navbar-collapse');
       if (navbarCollapse.classList.contains('show')) {
         let bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);

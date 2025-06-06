@@ -19,7 +19,7 @@
   <link rel="stylesheet" href="assests/assests/css/header.css" />
   <link rel="stylesheet" href="assests/assests/css/sidebar.css" />
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+ 
 
   <title>Sidebar</title>
   
@@ -27,20 +27,16 @@
 
 <body>
 
-  <nav class="navbar sticky-top navbar-expand-lg navbar-dark nav">
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark navs">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand">Task-View</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
-        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+      <a href="/index.html" class="navsub">Task-View</a>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-          <a href="#" class="nav-item nav-link active me-lg-4" onclick="showContent('boardview', this)">Board</a>
-          <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Listview', this)">
+        <div class="navclass">
+          <a href="./pages/board.html"  class="navsub me-lg-4">Board</a>
+          <a href="./pages/list.html" class="navsub me-lg-4">
             <i class="fa-solid fa-list"></i>List</a>
-          <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Timeline', this)">
+          <a href="#" class="navsub me-lg-4">
             <i class="fa-solid fa-clock"></i>Timeline</a>
         </div>
 
@@ -110,7 +106,7 @@
     <div class="layout has-sidebar fixed-sidebar fixed-header">
         <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
         
-            <a id="btn-collapse" class="sidebar-collapser"><i class="ri-arrow-left-s-line"></i></a>
+            <a id="btn-collapse" class="sidebar-collapser" onclick="togglefunction()"><i class="ri-arrow-left-s-line"></i></a>
         
             <div class="sidebar-layout">
           
@@ -194,7 +190,7 @@
     </div>
   </div>-->
    
-    <div id="contentArea">
+    <div id="contentArea" class="contentArea1 contentArea">
         <div class="alltasks">
             <div class="dropdown" data-bs-theme="dark">
                 <a class="nav-link dropdown-toggle subcolour" style="padding: 0 0; padding-left: 25px;font-size: 16px;" href="#"
@@ -218,34 +214,36 @@
                     </div>
                 </div>
                 <div class="addbutton">
-                    <button class="btn rounded-pill buttoncol" type="button">+ New Task</button>
+                    <button id="cust_task" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Task</button>
                 </div>
             </div>
 
         </div>
-        <div class="contentText">
-            <h2 id="contentTitle">Sidebar</h2>
-            <div id="boardview" class="page-content" style="display:none;">
-                <p>This is the Board view content.</p>
-            </div>
-            <div id="Listview" class="page-content" style="display:none;">
-                <p>This is the List view content.</p>
-            </div>
-            <div id="Timeline" class="page-content" style="display:none;">
-                <p>This is the Timeline content.</p>
-            </div>
-        </div>
+        
     </div>
 
 
+     <div id="jmodal-placeholder"></div>
   
-  
-    <script src="assests/assests/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
     <script src="assests/assests/js/main.js"></script>
     <script src="assests/assests/js/sidebar.js"></script>
     <script src="assests/assests/js/header.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
+    <script>
+
+        $(document).ready(function() {
+            $('#cust_task').on('click', function() {
+            // Load the modal content
+            $('#jmodal-placeholder').load('pages/addtask.html', function() {
+                // Reinitialize the modal after loading
+                $('#addTaskModal').modal('show');
+            });
+            });
+        });
+        </script>
 
 </body>
 

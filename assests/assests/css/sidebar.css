@@ -196,11 +196,8 @@ $sidebar-footer-height: 230px;*/
 .sidebar.collapsed .sidebar-link-text{
     display: none;
 }
-.layout {
-  padding-top: 70px; /* height of your navbar */
-}
 #contentArea {
-  margin-top: 70px; /* adjust based on actual navbar height */
+  margin-top: 85px; 
 }
 .contentArea1 {
   margin-left: 268px;

@@ -31,20 +31,20 @@
 
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark navs">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand">Task-View</a>
+      <a href="/index.html" class="navsub">Task-View</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
         <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav">
-                <a href="#" class="nav-item nav-link active me-lg-4" onclick="showContent('boardview', this)">Board</a>
-                <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Listview', this)">
-                    <i class="fa-solid fa-list"></i>List</a>
-                <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Timeline', this)">
-                    <i class="fa-solid fa-clock"></i>Timeline</a>
-            </div>
+            <div class="navclass">
+          <a href="./board.html"  class="navsub me-lg-4">Board</a>
+          <a href="./list.html" class="navsub active me-lg-4">
+            <i class="fa-solid fa-list"></i>List</a>
+          <a href="#" class="navsub me-lg-4">
+            <i class="fa-solid fa-clock"></i>Timeline</a>
+        </div>
 
             <ul class="navbar-nav ms-auto profile-menu">
                 <li class="nav-item dropdown m-lg-3">
@@ -226,7 +226,8 @@
                 </div>
             </div>
             <div class="addbutton">
-                <button class="btn rounded-pill buttoncol" onclick="addTask()" type="button">+ New Task</button>
+                <button id="cust_task" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Task</button>
+                
             </div>
         </div>
 
@@ -1207,6 +1208,7 @@
 
         <!-- Placeholder for modal -->
         <div id="modal-placeholder"></div>
+        <div id="jmodal-placeholder"></div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="../assests/assests/js/main.js"></script>
         <script src="../assests/assests/js/sidebar.js"></script>
@@ -1216,13 +1218,16 @@
 
         <script>
 
-        $(document).ready(function() {
-            $('#cust_btn').on('click', function() {
-            // Load the modal content
-            $('#modal-placeholder').load('addsubtask.html', function() {
-                // Reinitialize the modal after loading
+        $(document).ready(function () {
+            $('#modal-placeholder').load('addsubtask.html');
+            $('#jmodal-placeholder').load('addtask.html');
+
+            $(document).on('click', '#cust_btn', function () {
                 $('#addSubTaskModal').modal('show');
             });
+
+            $(document).on('click', '#cust_task', function () {
+                $('#addTaskModal').modal('show');
             });
         });
 

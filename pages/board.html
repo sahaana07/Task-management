@@ -14,7 +14,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
  
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
 
 
   <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
@@ -22,8 +24,9 @@
   <link rel="stylesheet" href="../assests/assests/css/header.css" />
   <link rel="stylesheet" href="../assests/assests/css/sidebar.css" />
   <link rel="stylesheet" href="../assests/assests/css/board-view.css" />
+  
 
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
 <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
@@ -37,20 +40,20 @@
 
 <body>
 
-  <nav class="navbar  navbar-expand-lg navbar-dark nav">
+  <nav class="navbar  navbar-expand-lg navbar-dark navs">
     <div class="container-fluid">
-      <a href="#" class="navbar-brand">Task-View</a>
+      <a href="/index.html" class="navsub">Task-View</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav">
-          <a href="#" class="nav-item nav-link active me-lg-4" onclick="showContent('boardview', this)">Board</a>
-          <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Listview', this)">
+        <div class="navclass">
+          <a href="./board.html"  class="navsub active me-lg-4">Board</a>
+          <a href="./list.html" class="navsub me-lg-4">
             <i class="fa-solid fa-list"></i>List</a>
-          <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Timeline', this)">
+          <a href="#" class="navsub me-lg-4">
             <i class="fa-solid fa-clock"></i>Timeline</a>
         </div>
 
@@ -76,7 +79,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownLg" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="../assests/assests/images/profile pic.jpg" alt="Profile Picture" class="rounded-circle" width="35" height="35" />
+              <img src="../images/profile pic.jpg" alt="Profile Picture" class="rounded-circle" width="35" height="35" />
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLg">
               <li><a class="dropdown-item" href="#">Account</a></li>
@@ -209,12 +212,12 @@
    
 <div id="contentArea" class="contentArea1 contentArea" >
     <div class="alltasks">
-    <div class="dropdown" data-bs-theme="dark">
+    <div class="dropdown" data-bs-theme="light">
           <a class="nav-link dropdown-toggle subcolour" style="padding: 0 0; padding-left: 25px;font-size: 16px;" href="#"
             id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             All Tasks
           </a>
-          <ul class="dropdown-menu dropdown-menu-dark subcol" style="padding: 0px; text-align: left;"
+          <ul class="dropdown-menu  subcol" style="padding: 0px; text-align: left;"
             aria-labelledby="navbarDarkDropdownMenuLink">
             <li><a class="dropdown-item" href="#" >Completed</a></li>
             <li><a class="dropdown-item" href="#" >To Do</a></li>
@@ -231,14 +234,14 @@
         </div>
         </div>
         <div class="addbutton">
-            <button id="cust_btn" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Task</button>
-            <div id="jmodal-placeholder"></div>
+            <button id="cust_task" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Task</button>
+            
+       
         </div>
         </div>
 
    </div>
     <div class="contentText">
-      <h2 id="contentTitle">Sidebar</h2>
       <div id="boardview" class="page-content" style="display:block; width: 100%;">
         <div class="board-main">
           <div class="row">
@@ -256,12 +259,12 @@
       </div>
       
     <div class="top-right-icons">
- <div class="dropdown" data-bs-theme="dark">
+ <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -310,12 +313,12 @@
       </div>
       
     <div class="top-right-icons">
- <div class="dropdown" data-bs-theme="dark">
+ <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -364,12 +367,12 @@
       </div>
       
     <div class="top-right-icons">
-  <div class="dropdown" data-bs-theme="dark">
+  <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -428,12 +431,12 @@
       </div>
       
     <div class="top-right-icons">
- <div class="dropdown" data-bs-theme="dark">
+ <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -482,12 +485,12 @@
       </div>
       
     <div class="top-right-icons">
- <div class="dropdown" data-bs-theme="dark">
+ <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -536,12 +539,12 @@
       </div>
       
     <div class="top-right-icons">
-  <div class="dropdown" data-bs-theme="dark">
+  <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -599,12 +602,12 @@
       </div>
       
     <div class="top-right-icons">
-  <div class="dropdown" data-bs-theme="dark">
+  <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -653,12 +656,12 @@
       </div>
       
     <div class="top-right-icons">
- <div class="dropdown" data-bs-theme="dark">
+ <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -720,12 +723,12 @@
       </div>
       
     <div class="top-right-icons">
- <div class="dropdown" data-bs-theme="dark">
+ <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -774,12 +777,12 @@
       </div>
       
     <div class="top-right-icons">
- <div class="dropdown" data-bs-theme="dark">
+ <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -828,12 +831,12 @@
       </div>
       
     <div class="top-right-icons">
- <div class="dropdown" data-bs-theme="dark">
+ <div class="dropdown" data-bs-theme="light">
     <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
-    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+    <ul class="dropdown-menu " style="text-align: left;">
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
-      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
       <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
     </ul>
   </div>
@@ -877,49 +880,51 @@
     </div>
           </div>
         </div>
-       
+         
           </div>
         </div>
        
       </div>
       </div>
-      <div id="Listview" class="page-content" style="display:none;">
-        <p>This is the List view content.</p>
-      </div>
-      <div id="Timeline" class="page-content" style="display:none;">
-        <p>This is the Timeline content.</p>
-      </div>
+      
     </div>
-  </div>
 
+  <!-- Placeholder for modal --><!-- Placeholder for modal -->
+        
+        <div id="modal-placeholder"></div>
+        <div id="jmodal-placeholder"></div>
+        
   
-  <script src="../assests/assests/js/bootstrap.bundle.min.js"></script>
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   <script src="../assests/assests/js/main.js"></script>
   <script src="../assests/assests/js/sidebar.js"></script>
   <script src="../assests/assests/js/header.js"></script>
   <script src="../assests/assests/js/board-view.js"></script>
+ 
 
-
-  
-
-        
-      
-   
-  
+ 
 
 <!--jquery for new task-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 <script>
 
-$(function () {
-  $("#jmodal-placeholder").load("addtask.html");
+$(document).ready(function () {
+    $('#modal-placeholder').load('addsubtask.html', function () {
+        $('#jmodal-placeholder').load('addtask.html', function () {
+            // Now safe to bind modal buttons
+            $(document).on('click', '#cust_btn', function () {
+                $('#addSubTaskModal').modal('show');
+            });
 
+            $(document).on('click', '#cust_task', function () {
+                $('#addTaskModal').modal('show');
+            });
+        });
+    });
 });
 
-
-$(document).on("click", "#cust_btn", function () {
-  $("#addTaskModal").modal("show");
-});
 
 </script>
 
