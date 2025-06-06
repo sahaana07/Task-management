@@ -154,8 +154,10 @@ $border-color: rgba(#535d7d, 0.3);
 $sidebar-header-height: 100px;
 $sidebar-footer-height: 230px;*/
 
+
 .layout {
 	 z-index: 1;
+	
 }
  .layout .header {
 	 display: flex;
@@ -183,6 +185,7 @@ $sidebar-footer-height: 230px;*/
         display: flex;
         flex-direction: column;
         overflow: visible;
+		
 }
 .sidebar.collapsed{
     width: 70px;
@@ -193,12 +196,24 @@ $sidebar-footer-height: 230px;*/
 .sidebar.collapsed .sidebar-link-text{
     display: none;
 }
+.layout {
+  padding-top: 70px; /* height of your navbar */
+}
 #contentArea {
-  margin-left: 260px;
+  margin-top: 70px; /* adjust based on actual navbar height */
+}
+.contentArea1 {
+  margin-left: 268px;
   transition: margin-left 0.3s ease;
   text-align: center;
+  height: 100%;
 }
-
+.contentArea2 {
+  margin-left: 80px;
+  transition: margin-left 0.3s ease;
+  text-align: center;
+  height: 100%;
+}
 #contentArea.sidebar-collapsed {
   margin-left: 70px;
 }
