@@ -1,0 +1,108 @@
+
+th{
+    font-size: 14px;
+    padding: 10px;
+}
+tr{
+    font-size: 12px;
+    padding: 10px !important;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+.badges{
+    position: relative;
+    font-size: 100% !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 15px !important;
+    padding-right: 10px !important;
+}
+
+ .dot {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+.custom-badge1 {
+    background-color: rgba(39, 187, 228, 0.2)!important;
+    color: #17a2b8 !important;
+}
+.custom-badge2 {
+    background-color: rgba(229, 127, 127, 0.2)!important;
+    color: #df6666 !important;
+}
+
+.custom-badge3 {
+    background-color: rgba(39, 228, 89, 0.2)!important;
+    color: #17b855 !important;
+}
+
+.custom-badge7 {
+    background-color: rgba(229, 189, 104, 0.2)!important;
+    color: #b88017 !important;
+}
+.prioritybadges{
+    position: relative;
+    font-size: 100% !important;
+    color: white !important;
+    padding: 4px 10px !important;
+}
+.custom-badge4 {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+}
+.custom-badge5 {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+.custom-badge6 {
+    background: linear-gradient(45deg, #ffcc70, #ffb347);
+}
+table.table-striped tbody tr:nth-child(odd) {
+  background-color: #e3ebff; /* light blue */
+}
+
+table.table-striped tbody tr:nth-child(even) {
+  background-color: #ffffff;
+}
+table.table-striped thead tr{
+  background-color: #c4d6f9;
+}
+.progressbackground{
+    background-color: #e5e0e0 !important;
+}
+.barheight{
+    height: 11px;
+}
+
+.pagenav{
+    position: fixed;
+    right: 10px;
+    bottom: 0;
+    justify-content: center;
+    display: flex;
+}
+thead th {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      background-color: #c4d6f9;
+}
+.contentText {
+      max-height: calc(100% - 235px); /* Set desired scrollable height */
+      overflow-y: auto;
+}
+.no-wrap {
+  white-space: nowrap;
+}
+.no-arrow{
+    display: none;
+}
+.givespace{
+    padding-right:  10px;
+}

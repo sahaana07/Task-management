@@ -297,6 +297,9 @@ INNER_SUB_MENUS_BTN.forEach((element) => {
     slideToggle(element.nextElementSibling);
   });
 });
-
+function togglefunction(){
+   var element = document.getElementById("contentArea");
+   element.classList.toggle("contentArea2");
+}
 
 
