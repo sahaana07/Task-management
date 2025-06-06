@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../assests/assests/css/main.css" />
+  <link rel="stylesheet" href="../assests/assests/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+ 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../assests/assests/css/header.css" />
+  <link rel="stylesheet" href="../assests/assests/css/sidebar.css" />
+  <link rel="stylesheet" href="../assests/assests/css/board-view.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+
+
+  
+
+  <title>Sidebar</title>
+  
+</head>
+
+<body>
+
+  <nav class="navbar  navbar-expand-lg navbar-dark nav">
+    <div class="container-fluid">
+      <a href="#" class="navbar-brand">Task-View</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav">
+          <a href="#" class="nav-item nav-link active me-lg-4" onclick="showContent('boardview', this)">Board</a>
+          <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Listview', this)">
+            <i class="fa-solid fa-list"></i>List</a>
+          <a href="#" class="nav-item nav-link me-lg-4" onclick="showContent('Timeline', this)">
+            <i class="fa-solid fa-clock"></i>Timeline</a>
+        </div>
+
+        <ul class="navbar-nav ms-auto profile-menu">
+          <li class="nav-item dropdown m-lg-3">
+            <button class="btn position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-bell"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
+            </button>
+            <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
+              <li class="notification-ui_dd-header text-center fw-bold">Notifications</li>
+              <li class="notification-ui_dd-content">
+               
+              </li>
+              <li class="notification-ui_dd-footer">
+                <a href="#" class="btn btn-success w-100">View All</a>
+              </li>
+            </ul>
+          </li>
+
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownLg" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="../assests/assests/images/profile pic.jpg" alt="Profile Picture" class="rounded-circle" width="35" height="35" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLg">
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Log Out</a></li>
+            </ul>
+          </li>
+      
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!--<div id="sideMenu" class="sideMenu">
+    <a href="#" class="closeBtn" onclick="closeNav()">×</a>
+    <div class="mainMenu">
+      <div style="padding-bottom: 70px;">
+        <h3>Filters</h3>
+        <a href="#" class="colour" onclick="showFilters('Team Progress')">Team Progress</a>
+        <a href="#" class="colour" onclick="showFilters('Assignee')">Assignee</a>
+        <a href="#" class="colour" onclick="showFilters('Priority')">Priority</a>
+        <a href="#" class="colour" onclick="showFilters('Subtasks Status')">Subtasks Status</a>
+
+        <div class="dropdown" data-bs-theme="dark">
+          <a class="nav-link dropdown-toggle colour" style="padding: 0 0; padding-left: 25px;" href="#"
+            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Due Date
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark col" style="padding: 0px; text-align: left;"
+            aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#" onclick="showContent('Today')">Today</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Tomorrow')">Tomorrow</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Overdue')">Overdue</a></li>
+          </ul>
+        </div>
+      </div>-->
+      <div class="layout has-sidebar fixed-sidebar fixed-header">
+      <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+        
+        <a id="btn-collapse" class="sidebar-collapser" onclick="togglefunction()"><i class="ri-arrow-left-s-line"></i></a>
+        
+        <div class="sidebar-layout">
+          
+          <div class="sidebar-content">
+            <nav class="menu open-current-submenu">
+                <ul>
+                <li class="menu-header" style="padding-top: 0px"><span> FILTERS </span></li>
+
+                <li class="menu-item">
+                    <a href="team-progress.html">
+                    <span class="menu-icon"><i class="fa-solid fa-chart-line"></i></span>
+                    <span class="menu-title">Team Progress</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="assignee.html">
+                    <span class="menu-icon"><i class="fa-solid fa-people-group"></i></span>
+                    <span class="menu-title">Assignee</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="priority.html">
+                    <span class="menu-icon"><i class="fa-solid fa-arrow-up-wide-short"></i></span>
+                    <span class="menu-title">Priority</span>
+                    </a>
+                </li>
+
+                <li class="menu-item">
+                    <a href="subtask-status.html">
+                    <span class="menu-icon"><i class="fa-solid fa-diagram-successor"></i></span>
+                    <span class="menu-title">Subtask Status</span>
+                    </a>
+                </li>
+
+                <li class="menu-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="dueDateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="menu-icon"><i class="ri-calendar-event-fill"></i></span>
+                        <span class="menu-title">Due Date</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark smalldropdown" aria-labelledby="dueDateDropdown">
+                        <li><a class="dropdown-item" href="due-today.html">Today</a></li>
+                        <li><a class="dropdown-item" href="due-tomorrow.html">Tomorrow</a></li>
+                        <li><a class="dropdown-item" href="due-overdue.html">Overdue</a></li>
+                    </ul>
+                </li>
+
+                <li class="menu-header" style="padding-top: 150px"><span> OVERALL PROGRESS </span></li>
+                <div class="programming-stats">
+                    <div class="chart-container">
+                       <canvas class="myChart" width="200" height="200"></canvas>
+                       <div id="chartCenterText">Progress</div>
+                    </div>
+                </div>
+               
+                <!--<div style="align-items: center;">
+                       <img
+                            class="react-logo" style="width: 100px; height: 100px;"
+                            src="https://user-images.githubusercontent.com/25878302/213938106-ca8f0485-3f30-4861-9188-2920ed7ab284.png"
+                            alt="react"/>
+                    </div>-->
+                
+                </ul>
+            </nav>
+        </div>
+
+          
+        </div>
+    </aside>
+      </div>
+      
+      
+
+      <!--<div>
+        <h3>Overall Progress</h3>
+        <div class="programming-stats">
+          <div class="chart-container">
+            <canvas class="myChart" width="200" height="200"></canvas>
+            <div id="chartCenterText">Progress</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+   
+<div id="contentArea" class="contentArea1 contentArea" >
+    <div class="alltasks">
+    <div class="dropdown" data-bs-theme="dark">
+          <a class="nav-link dropdown-toggle subcolour" style="padding: 0 0; padding-left: 25px;font-size: 16px;" href="#"
+            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            All Tasks
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark subcol" style="padding: 0px; text-align: left;"
+            aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#" >Completed</a></li>
+            <li><a class="dropdown-item" href="#" >To Do</a></li>
+            <li><a class="dropdown-item" href="#" >On Process</a></li>
+          </ul>
+        </div>
+        <div class="search-button">
+        <div class="searchbar">
+        <div class="input-group overflow-hidden">
+            <span class="input-group-text bg-white border-2">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+            <input type="text" class="form-control border-2" placeholder="search">
+        </div>
+        </div>
+        <div class="addbutton">
+            <button id="cust_btn" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Task</button>
+            <div id="jmodal-placeholder"></div>
+        </div>
+        </div>
+
+   </div>
+    <div class="contentText">
+      <h2 id="contentTitle">Sidebar</h2>
+      <div id="boardview" class="page-content" style="display:block; width: 100%;">
+        <div class="board-main">
+          <div class="row">
+         <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4" id="on-progress">
+          <div class="column-box">
+           <h3 class="title1">To-do</h3>
+           <div class="op-scroll">
+                <div class="colum1 dropzone">
+                <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+ <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-high">High</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountablility: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+  <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+ <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-low">Low</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountablility: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+ <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+  <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-medium">Medium</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountable: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+                </div>
+    </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4" id="on-progress">
+          <div class="column-box">
+           <h3 class="title1">In-Progress</h3>
+           <div class="op-scroll">
+                <div class="colum1 dropzone">
+                <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+ <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-high">High</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountablility: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+  <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+ <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-low">Low</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountablility: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+ <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+  <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-medium">Medium</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountable: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+                </div>
+    </div>
+          </div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4" id="on-hold">
+          <div class="column-box">
+  <h3 class="title1">On-hold</h3>
+  <div class="oh-scroll">
+    <div class="colum1 dropzone">
+                 <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+  <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-medium">Medium</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountablility: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+  <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+ <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-medium">Medium</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountablility: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+</div>
+
+                </div>
+
+          </div>
+        </div>
+
+        
+        <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4" id="completed">
+          <div class="column-box">
+  <h3 class="title1">Completed</h3>
+  <div class="cp-scroll">
+    <div class="colum1 dropzone">
+                 <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+ <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-medium">Medium</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountablility: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+  <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+ <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-medium">Medium</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountablility: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+ <div class="task-card card-top-border-red mb-3" >
+   <div class="card-header">
+            <div class="task-header-content">
+               <div>
+        <h3 class="task-title">Project Alpha</h3>
+        <p class="task-subtitle">Redesign Landing Page</p> <!-- Task name below title -->
+      </div>
+      
+    <div class="top-right-icons">
+ <div class="dropdown" data-bs-theme="dark">
+    <i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+    <ul class="dropdown-menu dropdown-menu-dark" style="text-align: left;">
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon"></i>Task Detail</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon"></i>Edit Task</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-plus bicon"></i>Add Subtask</a></li>
+      <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon"></i>Delete Task</a></li>
+    </ul>
+  </div>
+  <div class="priority-medium">Medium</div>
+</div>
+
+            </div>
+        </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">
+  <div class="pbar">
+    <div class="progress flex-grow-1 me-2" style="height: 6px;">
+      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <small class="tm">25%</small>
+  </div>
+</li>
+ <li class="list-group-item">
+  <div class="task-meta-row">
+    <div class="assignees">
+      <img class="avatar" src="../assests/assests/images/p1.jpg" title="User 1" alt="User 1"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p2.jpeg" title="User 2" alt="User 2"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p3.jpeg" title="User 3" alt="User 3"  data-bs-toggle="tooltip">
+      <img class="avatar" src="../assests/assests/images/p4.jpg" title="User 4" alt="User 4"  data-bs-toggle="tooltip">
+    </div>
+    <span class="date-badge">Due:Nov 20</span>
+    <div class="completion-status">
+      <i class="fa-solid fa-check"></i>
+      <span>3/5</span>
+    </div>
+  </div>
+  <div class="accountability">Accountablility: John D.</div> 
+</li>
+    
+        <li class="list-group-item">
+            <button class="add-subtask-btn">+ Subtask</button>
+        </li>
+  </ul>
+</div>
+                </div>
+    </div>
+          </div>
+        </div>
+       
+          </div>
+        </div>
+       
+      </div>
+      </div>
+      <div id="Listview" class="page-content" style="display:none;">
+        <p>This is the List view content.</p>
+      </div>
+      <div id="Timeline" class="page-content" style="display:none;">
+        <p>This is the Timeline content.</p>
+      </div>
+    </div>
+  </div>
+
+  
+  <script src="../assests/assests/js/bootstrap.bundle.min.js"></script>
+  <script src="../assests/assests/js/main.js"></script>
+  <script src="../assests/assests/js/sidebar.js"></script>
+  <script src="../assests/assests/js/header.js"></script>
+  <script src="../assests/assests/js/board-view.js"></script>
+
+
+  
+
+        
+      
+   
+  
+
+<!--jquery for new task-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+
+$(function () {
+  $("#jmodal-placeholder").load("addtask.html");
+
+});
+
+
+$(document).on("click", "#cust_btn", function () {
+  $("#addTaskModal").modal("show");
+});
+
+</script>
+
+
+</body>
+
+</html>

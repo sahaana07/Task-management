@@ -298,5 +298,8 @@ INNER_SUB_MENUS_BTN.forEach((element) => {
   });
 });
 
-
+function togglefunction(){
+   var element = document.getElementById("contentArea");
+   element.classList.toggle("contentArea2");
+}
 
