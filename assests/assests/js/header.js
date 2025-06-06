@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         title.textContent = this.textContent.trim() + ' Page';
         title.style.display = 'block';
       }*/
+     
       const navbarCollapse = document.querySelector('.navbar-collapse');
       if (navbarCollapse.classList.contains('show')) {
         let bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
