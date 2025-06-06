@@ -1,3 +1,11 @@
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1050; /* ensure it's on top of everything */
+}
+
  .profile-pic{
    display: inline-block;
    vertical-align: middle;

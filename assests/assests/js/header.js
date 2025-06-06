@@ -1,74 +1,56 @@
- document.querySelectorAll('.dropdown-toggle').forEach(item => {
-            item.addEventListener('click', event => {
-                if (event.target.classList.contains('dropdown-toggle')) {
-                    event.target.classList.toggle('toggle-change');
-                } else if (event.target.parentElement.classList.contains('dropdown-toggle')) {
-                    event.target.parentElement.classList.toggle('toggle-change');
-                }
-            });
-        });
-
-        function showContent(content) {
-            document.getElementById("contentTitle").textContent = content + " Page";
-            document.getElementById("mainContent").innerHTML = `
-                <h1>${content} Page</h1>
-                
-            `;
-        }
-       document.addEventListener('DOMContentLoaded', function () {
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            navLinks.forEach(nav => nav.classList.remove('active'));
-            this.classList.add('active');
-        });
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.dropdown-toggle').forEach(item => {
+    item.addEventListener('click', event => {
+      const target = event.target.classList.contains('dropdown-toggle')
+        ? event.target
+        : event.target.parentElement.classList.contains('dropdown-toggle')
+          ? event.target.parentElement
+          : null;
+      if (target) target.classList.toggle('toggle-change');
     });
-});
+  });
 
-function showContent(viewId) {
-    const sections = document.querySelectorAll('.view-section');
-    sections.forEach(section => {
-        if (section.id === viewId) {
-            section.classList.remove('d-none');
-        } else {
-            section.classList.add('d-none');
-        }
-    });
-}
-// Close navbar collapse on nav-link click (for smooth collapse on mobile)
-    document.querySelectorAll('.navbar-collapse .nav-link').forEach(link => {
-      link.addEventListener('click', () => {
-        const bsCollapse = bootstrap.Collapse.getInstance(document.querySelector('.navbar-collapse'));
-        if (bsCollapse && document.querySelector('.navbar-collapse').classList.contains('show')) {
-          bsCollapse.hide();
-        }
+  const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      navLinks.forEach(nav => nav.classList.remove('active'));
+      this.classList.add('active');
+      document.querySelectorAll('.page-content').forEach(div => {
+        div.style.display = 'none';
       });
-    });
-
-   
-    function showContent(pageId, elem) {
-     
-      document.querySelectorAll('.page-content').forEach(div => (div.style.display = 'none'));
-
-      
-      const contentDiv = document.getElementById(pageId);
-      if (contentDiv) contentDiv.style.display = 'block';
-
-      
-      document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-        link.classList.remove('active');
-      });
-      if (elem) elem.classList.add('active');
-
-      
+      const pageId = this.getAttribute('onclick')?.match(/'([^']+)'/)?.[1];
+      if (pageId) {
+        const contentDiv = document.getElementById(pageId);
+        if (contentDiv) contentDiv.style.display = 'block';
+      }
       const title = document.getElementById('contentTitle');
-      title.textContent = elem ? elem.textContent.trim() : '';
+      if (this.textContent.trim().toLowerCase() === 'board') {
+        title.textContent = '';
+        title.style.display = 'none';
+      } else {
+        title.textContent = this.textContent.trim() + ' Page';
+        title.style.display = 'block';
+      }
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+      if (navbarCollapse.classList.contains('show')) {
+        let bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+        if (!bsCollapse) {
+          bsCollapse = new bootstrap.Collapse(navbarCollapse);
+        }
+        bsCollapse.hide();
+      }
+    });
+  });
 
-     
-    }
-
-    
-    window.onload = () => {
-      showContent('boardview', document.querySelector('.navbar-nav .nav-link.active'));
-    };
+  const activeLink = document.querySelector('.navbar-nav .nav-link.active');
+  if (activeLink) {
+    activeLink.click();
+  } else {
+    const defaultContent = document.getElementById('boardview');
+    if (defaultContent) defaultContent.style.display = 'block';
+    const title = document.getElementById('contentTitle');
+    title.textContent = '';
+    title.style.display = 'none';
+  }
+});
