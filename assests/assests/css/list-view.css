@@ -30,21 +30,21 @@ table{
     background-color: currentColor;
     border-radius: 50%;
 }
-.custom-badge1 {
+.custom-badge-On-process {
     background-color: rgba(39, 187, 228, 0.2)!important;
     color: #17a2b8 !important;
 }
-.custom-badge2 {
+.custom-badge-To-do {
     background-color: rgba(229, 127, 127, 0.2)!important;
     color: #df6666 !important;
 }
 
-.custom-badge3 {
+.custom-badge-Completed {
     background-color: rgba(39, 228, 89, 0.2)!important;
     color: #17b855 !important;
 }
 
-.custom-badge7 {
+.custom-badge-On-hold {
     background-color: rgba(229, 189, 104, 0.2)!important;
     color: #b88017 !important;
 }
@@ -54,13 +54,13 @@ table{
     color: white !important;
     padding: 4px 10px !important;
 }
-.custom-badge4 {
+.custom-badge-Low {
     background: linear-gradient(45deg, #007bff, #0056b3);
 }
-.custom-badge5 {
+.custom-badge-High {
     background: linear-gradient(45deg, #ff416c, #ff4b2b);
 }
-.custom-badge6 {
+.custom-badge-Medium {
     background: linear-gradient(45deg, #ffcc70, #ffb347);
 }
 table.table-striped tbody tr:nth-child(odd) {

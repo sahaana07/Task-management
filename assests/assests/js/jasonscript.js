@@ -195,7 +195,7 @@ var post={
     assigneeimg:""
   },
   {
-    Taskstatus:"On-Process",
+    Taskstatus:"On-process",
     Projectname:"Project 1",
     Taskname:"painting",
     Taskpriority:"Low",
@@ -620,4 +620,404 @@ function innerContent(content){
   $(".tm").html(post[content].Taskprogress);
   $(".date-badge").html(post[content].Taskdue);
 };
+
+
+
+
+
+
+/*list-view*/
+var postlist=[
+    {
+    Taskstatus:"To-do",
+    Projectname:"Project Alpha",
+    Taskname:"Redesign Landing Page",
+    Taskpriority:"High",
+    Taskdue:"Due:Nov 20",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: John D.",
+    Personaccountable:"Harini",
+    Taskprogress:"25",
+    Taskassignee:"Harish",
+    Startdate:"05/06/2025",
+    Promiseddate:"20/11/2025",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"To-do",
+    Projectname:"Project 1",
+    Taskname:"painting",
+    Taskpriority:"Low",
+    Taskdue:"Due:Sept 7",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Harini",
+    Personaccountable:"Harini",
+    Taskprogress:"10",
+    Taskassignee:"Unassigned",
+    Startdate:"01/08/2019",
+    Promiseddate:"07/08/2019",
+    assigneeimg:""
+  },
+   {
+    Taskstatus:"On-hold",
+    Projectname:"Project 5",
+    Taskname:"Install electric service panel",
+    Taskpriority:"Low",
+    Taskdue:"Due:Sept 22",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Hariprasath",
+    Personaccountable:"Hariprasath",
+    Taskprogress:"30",
+    Taskassignee:"Unassigned",
+    Startdate:"11/09/2020",
+    Promiseddate:"22/09/2020",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"To-do",
+    Projectname:"Project 2",
+    Taskname:"Floor 3 pipeline",
+    Taskpriority:"High",
+    Taskdue:"Due:Sept 10",
+    Completion:"2/5",
+    Taskaccountability:"Accountablility: Ram",
+    Personaccountable:"Ram",
+    Taskprogress:"0",
+    Taskassignee:"aparna.s",
+    Startdate:"-",
+    Promiseddate:"10/09/2020",
+    assigneeimg:""
+  },
+ {
+    Taskstatus:"On-process",
+    Projectname:"Project 7",
+    Taskname:"Tasks",
+    Taskpriority:"Medium",
+    Taskdue:"Due:Jul 10",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Anushree",
+    Personaccountable:"Anushree",
+    Taskprogress:"50",
+    Taskassignee:"Unassigned",
+    Startdate:"14/06/2019",
+    Promiseddate:"10/07/2019",
+    assigneeimg:""
+  },
+ {
+    Taskstatus:"Completed",
+    Projectname:"Project 6",
+    Taskname:"electric walk-through",
+    Taskpriority:"Low",
+    Taskdue:"Due:Jan 10",
+    Completion:"4/5",
+    Taskaccountability:"Accountablility: Naveen",
+    Personaccountable:"Naveen",
+    Taskprogress:"10",
+    Taskassignee:"Avinash Manivaran",
+    Startdate:"-",
+    Promiseddate:"10/01/2020",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"To-do",
+    Projectname:"Project 5",
+    Taskname:"Install electric service panel",
+    Taskpriority:"Low",
+    Taskdue:"Due:Sept 22",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Hariprasath",
+    Personaccountable:"Hariprasath",
+    Taskprogress:"30",
+    Taskassignee:"Unassigned",
+    Startdate:"11/09/2020",
+    Promiseddate:"22/09/2020",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"To-do",
+    Projectname:"Project 6",
+    Taskname:"electric walk-through",
+    Taskpriority:"Low",
+    Taskdue:"Due:Jan 10",
+    Completion:"4/5",
+    Taskaccountability:"Accountablility: Naveen",
+    Personaccountable:"Naveen",
+    Taskprogress:"10",
+    Taskassignee:"Avinash Manivaran",
+    Startdate:"-",
+    Promiseddate:"10/01/2020",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"On-process",
+    Projectname:"Project 7",
+    Taskname:"Tasks",
+    Taskpriority:"Medium",
+    Taskdue:"Due:Jul 10",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Anushree",
+    Personaccountable:"Anushree",
+    Taskprogress:"50",
+    Taskassignee:"Unassigned",
+    Startdate:"14/06/2019",
+    Promiseddate:"10/07/2019",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"On-process",
+    Projectname:"Project 8",
+    Taskname:"Inspect interior",
+    Taskpriority:"High",
+    Taskdue:"Due:Nov 11",
+    Completion:"2/5",
+    Taskaccountability:"Accountablility: Aravindhan",
+    Personaccountable:"Aravindhan",
+    Taskprogress:"30",
+    Taskassignee:"helen collins",
+    Startdate:"01/08/2019",
+    Promiseddate:"11/11/2019",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"On-process",
+    Projectname:"Project 23",
+    Taskname:"Monthly fire",
+    Taskpriority:"High",
+    Taskdue:"Due:Sept 15",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Harsh",
+    Personaccountable:"Harish",
+    Taskprogress:"30",
+    Taskassignee:"Fathima Yilmaz,chaithanya",
+    Startdate:"01/08/2019",
+    Promiseddate:"15/09/2019",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"On-hold",
+    Projectname:"Project 3",
+    Taskname:"Interior design",
+    Taskpriority:"Medium",
+    Taskdue:"Due:Oct 9",
+    Completion:"1/5",
+    Taskaccountability:"Accountablility: hema",
+    Personaccountable:"Hema",
+    Taskprogress:"100",
+    Taskassignee:"charles stone",
+    Startdate:"09/01/2020",
+    Promiseddate:"09/10/2020",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"On-process",
+    Projectname:"Project 9",
+    Taskname:"Interior",
+    Taskpriority:"Medium",
+    Taskdue:"Due:Nov 21",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Thankvika",
+    Personaccountable:"Thanvika",
+    Taskprogress:"0",
+    Taskassignee:"Stephen",
+    Startdate:"21/09/2020",
+    Promiseddate:"21/11/2020",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"On-process",
+    Projectname:"Project Alpha",
+    Taskname:"Redesign Landing Page",
+    Taskpriority:"High",
+    Taskdue:"Due:Nov 20",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: John D.",
+    Personaccountable:"Harini",
+    Taskprogress:"25",
+    Taskassignee:"Harish",
+    Startdate:"05/06/2025",
+    Promiseddate:"20/11/2025",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"On-process",
+    Projectname:"Project 1",
+    Taskname:"painting",
+    Taskpriority:"Low",
+    Taskdue:"Due:Sept 7",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Harini",
+    Personaccountable:"Harini",
+    Taskprogress:"10",
+    Taskassignee:"Unassigned",
+    Startdate:"01/08/2019",
+    Promiseddate:"07/08/2019",
+    assigneeimg:""
+  },
+    {
+    Taskstatus:"On-hold",
+    Projectname:"Project 2",
+    Taskname:"Floor 3 pipeline",
+    Taskpriority:"High",
+    Taskdue:"Due:Sept 10",
+    Completion:"2/5",
+    Taskaccountability:"Accountablility: Ram",
+    Personaccountable:"Ram",
+    Taskprogress:"0",
+    Taskassignee:"aparna.s",
+    Startdate:"-",
+    Promiseddate:"10/09/2020",
+    assigneeimg:""
+  },
+  
+  {
+    Taskstatus:"On-hold",
+    Projectname:"Project 4",
+    Taskname:"Interior design",
+    Taskpriority:"High",
+    Taskdue:"Due:Sept 28",
+    Completion:"4/5",
+    Taskaccountability:"Accountablility: yuvan",
+    Personaccountable:"yuvan",
+    Taskprogress:"0",
+    Taskassignee:"aparna.s,Aravindhan Rajendi",
+    Startdate:"09/04/2020",
+    Promiseddate:"28/09/2020",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"On-hold",
+    Projectname:"Project 5",
+    Taskname:"Install electric service panel",
+    Taskpriority:"Low",
+    Taskdue:"Due:Sept 22",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Hariprasath",
+    Personaccountable:"Hariprasath",
+    Taskprogress:"30",
+    Taskassignee:"Unassigned",
+    Startdate:"11/09/2020",
+    Promiseddate:"22/09/2020",
+    assigneeimg:""
+  },
+  
+  {
+    Taskstatus:"Completed",
+    Projectname:"Project 7",
+    Taskname:"Tasks",
+    Taskpriority:"Low",
+    Taskdue:"Due:Jul 10",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Anushree",
+    Personaccountable:"Anushree",
+    Taskprogress:"50",
+    Taskassignee:"Unassigned",
+    Startdate:"14/06/2019",
+    Promiseddate:"10/07/2019",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"Completed",
+    Projectname:"Project 8",
+    Taskname:"Inspect interior",
+    Taskpriority:"High",
+    Taskdue:"Due:Nov 11",
+    Completion:"2/5",
+    Taskaccountability:"Accountablility: Aravindhan",
+    Personaccountable:"Aravindhan",
+    Taskprogress:"30",
+    Taskassignee:"helen collins",
+    Startdate:"01/08/2019",
+    Promiseddate:"11/11/2019",
+    assigneeimg:""
+  },
+   {
+    Taskstatus:"To-do",
+    Projectname:"Project 5",
+    Taskname:"Install electric service panel",
+    Taskpriority:"Low",
+    Taskdue:"Due:Sept 22",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Hariprasath",
+    Personaccountable:"Hariprasath",
+    Taskprogress:"30",
+    Taskassignee:"Unassigned",
+    Startdate:"11/09/2020",
+    Promiseddate:"22/09/2020",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"Completed",
+    Projectname:"Project 11",
+    Taskname:"Material cost",
+    Taskpriority:"Low",
+    Taskdue:"Due:May 15",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Anushka",
+    Personaccountable:"Anushka",
+    Taskprogress:"0",
+    Taskassignee:"Unassigned",
+    Startdate:"01/08/2019",
+    Promiseddate:"15/05/2019",
+    assigneeimg:""
+  },
+  {
+    Taskstatus:"Completed",
+    Projectname:"Project 9",
+    Taskname:"Interior",
+    Taskpriority:"Low",
+    Taskdue:"Due:Nov 21",
+    Completion:"3/5",
+    Taskaccountability:"Accountablility: Thankvika",
+    Personaccountable:"Thanvika",
+    Taskprogress:"0",
+    Taskassignee:"Stephen",
+    Startdate:"21/09/2020",
+    Promiseddate:"21/11/2020",
+    assigneeimg:""
+  }
+]
+var tableBody = document.querySelector("#taskTable tbody");
+  var rows = "";
+
+  for (var i = 0; i < postlist.length; i++) {
+    rows += '<tr>' +
+      '<td class="textleft">' + postlist[i].Projectname + '</td>' +
+      '<td class="textleft">' + postlist[i].Taskname + '</td>' +
+      '<td>' +
+        '<span class="badge rounded-pill custom-badge-' + postlist[i].Taskstatus + ' badges">' +
+          '<span class="dot"></span>' + postlist[i].Taskstatus +
+        '</span>' +
+      '</td>' +
+      '<td>' + postlist[i].Taskassignee + '</td>' +
+      '<td>' + postlist[i].Personaccountable + '</td>' +
+      '<td>' +
+        '<span class="badge rounded-pill custom-badge-' + postlist[i].Taskpriority + ' prioritybadges">' + postlist[i].Taskpriority + '</span>' +
+      '</td>' +
+      '<td>' + postlist[i].Startdate + '</td>' +
+      '<td>' + postlist[i].Promiseddate + '</td>' +
+      '<td>' +
+        '<div class="progress rounded-pill progressbackground position-relative barheight">' +
+          '<div class="progress-bar bg-primary rounded-pill" style="width: ' + postlist[i].Taskprogress + '%; height: 100%;"></div>' +
+          '<div class="w-100 d-flex justify-content-center align-items-center position-absolute top-0 start-0 h-100" style="pointer-events: none; color: black; font-weight: 600;">' +
+            postlist[i].Taskprogress + '%' +
+          '</div>' +
+        '</div>' +
+      '</td>' +
+      '<td>' +
+        '<div class="dropdown" data-bs-theme="dark">' +
+          '<a class="nav-link subcolour" style="padding: 0 0; padding-left: 25px; font-size: 16px;" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">' +
+            '<span>&#8942;</span>' +
+          '</a>' +
+          '<ul class="dropdown-menu dropdown-menu-dark subcol" style="padding: 0px; text-align: left;" aria-labelledby="navbarDarkDropdownMenuLink">' +
+            '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon givespace"></i>Task Detail</a></li>' +
+            '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon givespace"></i>Edit Task</a></li>' +
+            '<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon givespace"></i>Add Subtask</a></li>' +
+            '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon givespace"></i>Delete Task</a></li>' +
+          '</ul>' +
+        '</div>' +
+      '</td>' +
+    '</tr>';
+  }
+
+  tableBody.innerHTML = rows;
 
