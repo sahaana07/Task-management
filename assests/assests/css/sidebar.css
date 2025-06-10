@@ -180,11 +180,11 @@ $sidebar-footer-height: 230px;*/
 	 overflow-x: hidden !important;
 	 position: fixed;
      transition: width 0.3s ease;
-     
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        overflow: visible;
+     z-index: 999;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
 		
 }
 .sidebar.collapsed{
