@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../assests/assests/css/main.css" />
+  <link rel="stylesheet" href="../assests/assests/css/bootstrap.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../assests/assests/css/header.css" />
+  <link rel="stylesheet" href="../assests/assests/css/sidebar.css" />
+  <link rel="stylesheet" href="../assests/assests/css/detailedview.css"/>
+  <link rel="stylesheet" href="../assests/assests/css/list-view.css">
+
+ 
+
+  <title>Sidebar</title>
+  
+</head>
+
+<body>
+
+  <nav class="navbar sticky-top navbar-expand-lg navbar-dark navs">
+    <div class="container-fluid">
+      <a href="./index.html" class="navsub">Task-View</a>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navclass">
+          <a href="../pages/board.html"  class="navsub me-lg-4">Board</a>
+          <a href="../pages/list.html" class="navsub me-lg-4">
+            <i class="fa-solid fa-list"></i>List</a>
+          <a href="#" class="navsub me-lg-4">
+            <i class="fa-solid fa-clock"></i>Timeline</a>
+        </div>
+
+        <ul class="navbar-nav ms-auto profile-menu">
+          <li class="nav-item dropdown m-lg-3">
+            <button class="btn position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <i class="fa-solid fa-bell"></i>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
+            </button>
+            <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
+              <li class="notification-ui_dd-header text-center fw-bold">Notifications</li>
+              <li class="notification-ui_dd-content">
+               
+              </li>
+              <li class="notification-ui_dd-footer">
+                <a href="#" class="btn btn-success w-100">View All</a>
+              </li>
+            </ul>
+          </li>
+
+          
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownLg" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <img src="./images/profile pic.jpg" alt="Profile Picture" class="rounded-circle" width="35" height="35" />
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLg">
+              <li><a class="dropdown-item" href="#">Account</a></li>
+              <li><a class="dropdown-item" href="#">Settings</a></li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li><a class="dropdown-item" href="#">Log Out</a></li>
+            </ul>
+          </li>
+      
+
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+  <!--<div id="sideMenu" class="sideMenu">
+    <a href="#" class="closeBtn" onclick="closeNav()">×</a>
+    <div class="mainMenu">
+      <div style="padding-bottom: 70px;">
+        <h3>Filters</h3>
+        <a href="#" class="colour" onclick="showFilters('Team Progress')">Team Progress</a>
+        <a href="#" class="colour" onclick="showFilters('Assignee')">Assignee</a>
+        <a href="#" class="colour" onclick="showFilters('Priority')">Priority</a>
+        <a href="#" class="colour" onclick="showFilters('Subtasks Status')">Subtasks Status</a>
+
+        <div class="dropdown" data-bs-theme="dark">
+          <a class="nav-link dropdown-toggle colour" style="padding: 0 0; padding-left: 25px;" href="#"
+            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Due Date
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark col" style="padding: 0px; text-align: left;"
+            aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#" onclick="showContent('Today')">Today</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Tomorrow')">Tomorrow</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Overdue')">Overdue</a></li>
+          </ul>
+        </div>
+      </div>-->
+    <div class="layout has-sidebar fixed-sidebar fixed-header">
+        <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+        
+            <a id="btn-collapse" class="sidebar-collapser" onclick="togglefunction()"><i class="ri-arrow-left-s-line"></i></a>
+        
+            <div class="sidebar-layout">
+          
+                <div class="sidebar-content">
+                        <nav class="menu open-current-submenu">
+                            <ul>
+                                <li class="menu-header" style="padding-top: 0px"><span> FILTERS </span></li>
+
+                                <li class="menu-item">
+                                    <a href="team-progress.html">
+                                    <span class="menu-icon"><i class="fa-solid fa-chart-line"></i></span>
+                                    <span class="menu-title">Team Progress</span>
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="assignee.html">
+                                    <span class="menu-icon"><i class="fa-solid fa-people-group"></i></span>
+                                    <span class="menu-title">Assignee</span>
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="priority.html">
+                                    <span class="menu-icon"><i class="fa-solid fa-arrow-up-wide-short"></i></span>
+                                    <span class="menu-title">Priority</span>
+                                    </a>
+                                </li>
+
+                                <li class="menu-item">
+                                    <a href="subtask-status.html">
+                                    <span class="menu-icon"><i class="fa-solid fa-diagram-successor"></i></span>
+                                    <span class="menu-title">Subtask Status</span>
+                                    </a>
+                                </li>
+
+                                <li class="menu-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="dueDateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <span class="menu-icon"><i class="ri-calendar-event-fill"></i></span>
+                                        <span class="menu-title">Due Date</span>
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark smalldropdown" aria-labelledby="dueDateDropdown">
+                                        <li><a class="dropdown-item" href="due-today.html">Today</a></li>
+                                        <li><a class="dropdown-item" href="due-tomorrow.html">Tomorrow</a></li>
+                                        <li><a class="dropdown-item" href="due-overdue.html">Overdue</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="menu-header" style="padding-top: 150px"><span> OVERALL PROGRESS </span></li>
+                                <div class="programming-stats">
+                                    <div class="chart-container">
+                                    <canvas class="myChart" width="200" height="200"></canvas>
+                                    <div id="chartCenterText">Progress</div>
+                                    </div>
+                                </div>
+                            
+                                <!--<div style="align-items: center;">
+                                    <img
+                                            class="react-logo" style="width: 100px; height: 100px;"
+                                            src="https://user-images.githubusercontent.com/25878302/213938106-ca8f0485-3f30-4861-9188-2920ed7ab284.png"
+                                            alt="react"/>
+                                    </div>-->
+                                
+                            </ul>
+                        </nav>
+                </div>
+
+          
+            </div>
+        </aside>
+    </div>
+      <!--<div>
+        <h3>Overall Progress</h3>
+        <div class="programming-stats">
+          <div class="chart-container">
+            <canvas class="myChart" width="200" height="200"></canvas>
+            <div id="chartCenterText">Progress</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>-->
+   <div class="container-fluid">
+    <div id="contentArea" class="contentArea1 contentArea">
+       
+        <div>
+            
+            <div class="mainview">
+               
+                <h3 class="detailhead">
+                    Task Details
+                </h3>
+            <div class="firsthead">
+              <div class="firstsub">
+                 <div class="prior ">
+                    Priority:
+                    <div class="badge rounded-pill custom-badge-Low prioritybadges">Low</div>
+                 </div>
+                 <div class="stats">
+                    Task Status:
+                    <span class="badge rounded-pill custom-badge-On-hold badges">On-hold</span>
+                 </div>
+              </div>
+              <div class="secondsub">
+                <div class="created text-muted">
+                    Created On : 26/07/2024
+                </div>
+                <div class="addbutton">
+                <button id="cust_task" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  ><i class="fa-solid fa-pen bicon"></i> Edit Task</button>
+                
+            </div>
+              </div>
+                
+                
+            </div>
+            <div>
+                <div class="content-section">
+            <table class="tableview">
+                <tr class="singlerow">
+                    <td class="labelrow">Project Name</td>
+                    <td><span class="value-highlight">Project 6</span></td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">Task Name</td>
+                    <td><span class="value-highlight">alignment of Page</span></td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">Team</td>
+                    <td><span class="value-highlight">Frontend</span></td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">Estimated Time</td>
+                    <td><span class="date-value">20/07/2024</span></td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">Due Date</td>
+                    <td><span class="date-value">30/07/2024</span></td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">Subtask</td>
+                    <td>Frontend Implementation</td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">Start Date</td>
+                    <td><span class="date-value">11/07/2024</span></td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">End Date</td>
+                    <td><span class="date-value">25/07/024</span></td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">Accountability</td>
+                    <td><span class="value-highlight">Sony</span></td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">Assignees</td>
+                    <td>
+                        <div class="assignee-container">
+                            <span class="assignee-tag">Jai</span>
+                            <span class="assignee-tag">Ram</span>
+                            <span class="assignee-tag">Subha</span>
+                            <span class="assignee-tag">Suriya</span>
+                            <span class="assignee-tag">Naveen</span>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="singlerow">
+                    <td class="labelrow">Subtasks</td>
+                    <td>
+                        <div class="subtasks-container">
+                            <div class="subtask-item">
+                                <div class="subtask-header">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox" checked>
+                                        <span class="checkmark"></span>
+                                        <span class="subtask-name completed">UI Component Design</span>
+                                    </label>
+                                </div>
+                                <div class="subtask-dates">
+                                    <span class="date-item">Start: <span class="date-value">11/07/2024</span></span>
+                                    <span class="date-item">End: <span class="date-value">15/07/2024</span></span>
+                                    <span class="date-item">Due: <span class="date-value">16/07/2024</span></span>
+                                    <span class="date-item">Assigned To: <span class="assignee-tag">Naveen</span></span>
+                                </div>
+                            </div>
+                            <div class="subtask-item">
+                                <div class="subtask-header">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="subtask-name">API Integration</span>
+                                    </label>
+                                </div>
+                                <div class="subtask-dates">
+                                    <span class="date-item">Start: <span class="date-value">16/07/2024</span></span>
+                                    <span class="date-item">End: <span class="date-value">22/07/2024</span></span>
+                                    <span class="date-item">Due: <span class="date-value">23/07/2024</span></span>
+                                    <span class="date-item">Assigned To: <span class="assignee-tag">Jai</span></span>
+                                </div>
+                            </div>
+                            <div class="subtask-item">
+                                <div class="subtask-header">
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="subtask-name">Testing & Validation</span>
+                                    </label>
+                                </div>
+                                <div class="subtask-dates">
+                                    <span class="date-item">Start: <span class="date-value">23/07/2024</span></span>
+                                    <span class="date-item">End: <span class="date-value">28/08/2024</span></span>
+                                    <span class="date-item">Due: <span class="date-value">30/08/2024</span></span>
+                                     <span class="date-item">Assigned To: <span class="assignee-tag">Subha</span></span>
+                                </div>
+                            </div>
+                            <div class="subtask-item">
+                                <div class="subtask-header">
+                                    <div>
+                                    <label class="checkbox-container">
+                                        <input type="checkbox">
+                                        <span class="checkmark"></span>
+                                        <span class="subtask-name">Documentation</span>
+                                    </label>
+                                    </div>
+                                   
+                                </div>
+                                <div class="subtask-dates">
+                                    <span class="date-item">Start: <span class="date-value">25/07/2024</span></span>
+                                    <span class="date-item">End: <span class="date-value">30/08/2024</span></span>
+                                    <span class="date-item">Due: <span class="date-value">26/07/2024</span></span>
+                                    <span class="date-item">Assigned To: <span class="assignee-tag">Suriya</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="singlerow">
+                   <td class="labelrow">Comments</td>
+                   <td>
+                   <div class="commentbox">
+                     <label class="comments">
+                            <textarea placeholder="Description" rows="3" style="width: 300px; height: 100px;"></textarea>
+                        </label>
+                        </div>
+                    </td>
+                    </tr>
+
+                <tr class="singlerow">
+                    <td class="labelrow">Repository</td>
+                    <td>
+                        <a href="#" class="github-link">Git hub link</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+                     
+            </div>
+            </div>
+        </div>
+        
+    </div>
+   </div>
+       
+        <div id="jmodal-placeholder"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../assests/assests/js/main.js"></script>
+        <script src="../assests/assests/js/sidebar.js"></script>
+        <script src="../assests/assests/js/header.js"></script>
+        <script src="../assests/assests/js/list-view.js"></script>
+        <script src="../assests/assests/js/bootstrap.bundle.min.js"></script>
+        <script src="../assests/assests/js/jasonscript.js"></script>
+
+        <script>
+
+        $(document).ready(function () {
+           
+            $('#jmodal-placeholder').load('addtask.html');
+
+           
+
+            $(document).on('click', '#cust_task', function () {
+                $('#addTaskModal').modal('show');
+            });
+        });
+
+        </script>
+        <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const task = JSON.parse(localStorage.getItem("selectedTaskFromList"));
+    if (!task) return;
+
+    // 1. Update header and badges
+    const priorityBadge = document.querySelector(".custom-badge-Low");
+    const statusBadge = document.querySelector(".custom-badge-On-hold");
+
+    if (priorityBadge) {
+      priorityBadge.innerText = task.Taskpriority;
+      priorityBadge.className = "badge rounded-pill custom-badge-" + task.Taskpriority + " prioritybadges";
+    }
+
+    if (statusBadge) {
+      statusBadge.innerText = task.Taskstatus;
+      statusBadge.className = "badge rounded-pill custom-badge-" + task.Taskstatus + " badges";
+    }
+
+    // 2. Mapping values
+    const mapping = {
+      "Project Name": task.Projectname,
+      "Task Name": task.Taskname,
+      "Estimated Time": task.Startdate,
+      "Due Date": task.Taskdue.replace("Due:", "").trim(),
+      "Start Date": task.Startdate,
+      "End Date": task.Promiseddate,
+      "Accountability": task.Personaccountable
+    };
+
+    const tableRows = document.querySelectorAll(".tableview tr");
+    tableRows.forEach(row => {
+      const label = row.querySelector(".labelrow");
+      const value = row.querySelector(".value-highlight");
+      if (label && value && mapping[label.innerText.trim()]) {
+        value.innerText = mapping[label.innerText.trim()];
+      }
+    });
+
+    // 3. Fix assignees list display
+    const assigneeRow = [...tableRows].find(row =>
+      row.querySelector(".labelrow")?.innerText.trim() === "Assignees"
+    );
+    const assigneeContainer = assigneeRow?.querySelector(".assignee-container");
+
+    if (assigneeContainer && task.Taskassignee) {
+      const names = task.Taskassignee.split(",").map(name => name.trim());
+      assigneeContainer.innerHTML = names.map(name => `<span class="assignee-tag">${name}</span>`).join("");
+    }
+  });
+</script>
+
+
+
+     
+
+</body>
+
+</html>
