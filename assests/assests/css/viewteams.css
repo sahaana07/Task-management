@@ -1,0 +1,91 @@
+.addteam{
+    padding-left: 20px;
+}
+.modal-title{
+    font-weight: bold;
+}
+td{
+    font-size: 14px;
+    line-height: 25px;
+    background: aliceblue;
+}
+.avatar {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 32px;
+  font-weight: bold;
+  font-size: 14px;
+  border: 1px solid #fff;
+  margin-left: -10px; /* Overlapping effect */
+  z-index: 1;
+  position: relative;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.avatar:first-child {
+  margin-left: 0; /* Don’t overlap the first avatar */
+}
+/*.clickable-row {
+      cursor: pointer;
+      background-color: #b5c2d6;
+      color: white;
+    }
+
+    .detail-row {
+      display: none;
+    }
+
+    .detail-row td {
+      background-color: #f8f9fa;
+      padding: 10px;
+    }
+
+    table {
+      width: 80%;
+      margin: 40px auto;
+      border-collapse: collapse;
+      border: 1px solid #ccc;
+    }*/
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f1f1;
+      margin: 20px;
+    }
+
+    .card-container {
+      width: 80%;
+      margin: 0 auto 20px auto;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .clickable-row {
+      cursor: pointer;
+      background-color: #b5c0cf;
+      color: rgb(10 15 44);
+      padding: 16px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .detail-row {
+      display: none;
+      padding: 16px;
+      background-color: #f9f9f9;
+      border-top: 1px solid #ddd;
+      font-size: 16px;
+    }
+    .detail-row ol {
+        padding-left: 1em;     
+        margin-left: 0;       
+        list-style-position: inside; 
+    }
+    .detail-row ol li::marker {
+  font-weight: bold;
+}

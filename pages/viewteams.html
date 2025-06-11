@@ -17,6 +17,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <link href=" https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet"/>
+  <link href="../assests/assests/css/viewteams.css" rel="stylesheet"/>
 
   <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
 
@@ -157,7 +158,6 @@
    
 <div id="contentArea" class="contentArea1 contentArea">
     <div class="newteam">
-        
         <div class="search-button">
             <div class="searchbar">
                 <div class="input-group overflow-hidden">
@@ -167,75 +167,121 @@
                     <input type="text" class="form-control border-2" placeholder="search">
                 </div>
             </div>
-            <div class="viewteam">
-                <a href="../pages/viewteams.html" class="btn rounded-pill buttoncol">View Teams</a>
+            <div class="addteam">
+                <button id="add_team" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Team</button>
             </div>
         </div>
     </div>
     <div class="contentText">
-        <div class="container">
-            <div class="progress-box">
-                <!-- JSON Here! -->
+        <ul class="team-box">
+            <!--list-->
+        </ul>
+        <!--<div class="card-container">
+            <div class="clickable-row" data-target="details1">
+                Development Team
+            </div>
+            <div class="detail-row" id="details1">
+                <strong>Details:</strong> Interior tasks assigned to Stephen Rothermel, ongoing with no progress yet.
             </div>
         </div>
+
+        <div class="card-container">
+            <div class="clickable-row" data-target="details2">
+                Design Team
+            </div>
+            <div class="detail-row" id="details2">
+                <strong>Details:</strong> Working on UI/UX mockups and wireframes.
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="clickable-row" data-target="details3">
+                Marketing Team
+            </div>
+            <div class="detail-row" id="details3">
+                <strong>Details:</strong> Campaign preparation for new product line.
+            </div>
+        </div>-->
+        <!--<table>
+            <tbody>
+                
+                <tr class="clickable-row" data-target="details1">
+                    <th colspan="2">Development Team</th>
+                </tr>
+                
+                <tr id="details1" class="detail-row">
+                    <td colspan="2">
+                        <strong>Additional Task Info:</strong><br>
+                        Interior tasks assigned to Stephen Rothermel, ongoing with no progress yet.
+                    </td>
+                </tr>
+
+                
+                <tr class="clickable-row" data-target="details2">
+                    <th colspan="2">Design Team</th>
+                </tr>
+                <tr id="details2" class="detail-row">
+                    <td colspan="2">
+                        <strong>More Info:</strong><br>
+                        Design team focusing on UI/UX refinements this sprint.
+                    </td>
+                </tr>
+            </tbody>
+        </table>-->
+        <!--<table id="teams">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Team Name</th>
+                    <th>Team Lead</th>
+                    <th>Team Members</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>-->
+    </div>   
+    <div class="pagenav" >
+        <nav aria-label="Page navigation example">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <div class="progressmodal" id="progressmodal-name" style="display: none;">
-        <div class="progressmodal-sandbox"></div>
-        <div class="progressmodal-box">
-            <div class="progressmodal-body">
-                <h2 class="inner-title"></h2>
-                <table id="modaltable">
-                    <thead>
-                        <tr>
-                            <th>Task Name</th>
-                            <th>Accountability</th>
-                            <th>Assignee</th>
-                            <th>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!--<tr>
-                            <td class="taskname"></td>
-                            <td class="acc"></td>
-                            <td class="ass"></td>
-                            <td class="stat"></td>
-                        </tr>-->
-                    </tbody>
-                </table>
-                <br>
-                <!--<h2 class="inner-title"></h2>
-                <div class="inner-text"></div>-->
-                <button class="prev-post">Previous</button>
-                <button class="next-post">Next</button>
-                <button class="close-post">Close</button>
-            </div>
-        </div>
-    </div>    
 </div>
 
         <!-- Placeholder for modal -->
-        <div id="modal-placeholder"></div>
-        <div id="jmodal-placeholder"></div>
+        <div id="tmodal-placeholder"></div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="../assests/assests/js/main.js"></script>
         <script src="../assests/assests/js/sidebar.js"></script>
         <script src="../assests/assests/js/header.js"></script>
         <script src="../assests/assests/js/list-view.js"></script>
         <script src="../assests/assests/js/bootstrap.bundle.min.js"></script>
-        <script src="../assests/assests/js/teamprogress.js"></script>
+        <script src="../assests/assests/js/viewteams.js"></script>
 
         <script>
 
         $(document).ready(function () {
-            $('#modal-placeholder').load('addsubtask.html');
-            $('#jmodal-placeholder').load('addtask.html');
+            $('#tmodal-placeholder').load('addteam.html');
 
-            $(document).on('click', '#cust_btn', function () {
-                $('#addSubTaskModal').modal('show');
-            });
-
-            $(document).on('click', '#cust_task', function () {
-                $('#addTaskModal').modal('show');
+            $(document).on('click', '#add_team', function () {
+                $('#addteamModal').modal('show');
             });
         });
 
