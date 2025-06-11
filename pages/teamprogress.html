@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="../assests/assests/css/main.css" />
+  <link rel="stylesheet" href="../assests/assests/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../assests/assests/css/list-view.css" />
+  <link rel="stylesheet" href="../assests/assests/css/board-view.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href=" https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet"/>
+
+  <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../assests/assests/css/header.css" />
+  <link rel="stylesheet" href="../assests/assests/css/sidebar.css" />
+  <link rel="stylesheet" href="../assests/assests/css/teamprogress.css"/>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+  
+  <title>Sidebar</title>
+  
+</head>
+
+<body>
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark navs">
+    <div class="container-fluid">
+      <a href="/index.html" class="navsub">Task-View</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navclass">
+          <a href="./board.html"  class="navsub me-lg-4">Board</a>
+          <a href="./list.html" class="navsub active me-lg-4">
+            <i class="fa-solid fa-list"></i>List</a>
+          <a href="#" class="navsub me-lg-4">
+            <i class="fa-solid fa-clock"></i>Timeline</a>
+        </div>
+
+            <ul class="navbar-nav ms-auto profile-menu">
+                <li class="nav-item dropdown m-lg-3">
+                    <button class="btn position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
+                    </button>
+                    <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
+                    <li class="notification-ui_dd-header text-center fw-bold">Notifications</li>
+                    <li class="notification-ui_dd-content">
+                    
+                    </li>
+                    <li class="notification-ui_dd-footer">
+                        <a href="#" class="btn btn-success w-100">View All</a>
+                    </li>
+                    </ul>
+                </li>
+
+            
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownLg" role="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="../images/profile pic.jpg" alt="Profile Picture" class="rounded-circle" width="35" height="35" />
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLg">
+                    <li><a class="dropdown-item" href="#">Account</a></li>
+                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                    <li>
+                        <hr class="dropdown-divider" />
+                    </li>
+                    <li><a class="dropdown-item" href="#">Log Out</a></li>
+                    </ul>
+                </li>
+            
+
+            </ul>
+        </div>
+    </div>
+</nav>
+
+      <div class="layout has-sidebar sidebar">
+        <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
+            
+            <a id="btn-collapse" class="sidebar-collapser" onclick="togglefunction()"><i class="ri-arrow-left-s-line"></i></a>
+            
+            <div class="sidebar-layout">
+            
+                <div class="sidebar-content">
+                    <nav class="menu open-current-submenu">
+                        <ul>
+                            <li class="menu-header" style="padding-top: 0px"><span> FILTERS </span></li>
+
+                            <li class="menu-item">
+                                <a href="./teamprogress.html">
+                                <span class="menu-icon"><i class="fa-solid fa-chart-line"></i></span>
+                                <span class="menu-title">Team Progress</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="assignee.html">
+                                <span class="menu-icon"><i class="fa-solid fa-people-group"></i></span>
+                                <span class="menu-title">Assignee</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="priority.html">
+                                <span class="menu-icon"><i class="fa-solid fa-arrow-up-wide-short"></i></span>
+                                <span class="menu-title">Priority</span>
+                                </a>
+                            </li>
+
+                            <li class="menu-item">
+                                <a href="subtask-status.html">
+                                <span class="menu-icon"><i class="fa-solid fa-diagram-successor"></i></span>
+                                <span class="menu-title">Subtask Status</span>
+                                </a>
+                            </li>
+                            
+                            <li class="menu-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dueDateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <span class="menu-icon"><i class="ri-calendar-event-fill"></i></span>
+                                    <span class="menu-title">Due Date</span>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-dark smalldropdown" aria-labelledby="dueDateDropdown">
+                                    <li><a class="dropdown-item" href="due-today.html">Today</a></li>
+                                    <li><a class="dropdown-item" href="due-tomorrow.html">Tomorrow</a></li>
+                                    <li><a class="dropdown-item" href="due-overdue.html">Overdue</a></li>
+                                </ul>
+                            </li>
+
+                            <li class="menu-header" style="padding-top: 150px"><span> OVERALL PROGRESS </span></li>
+                            <div class="programming-stats">
+                                <div class="chart-container">
+                                    <canvas class="myChart" width="200" height="200"></canvas>
+                                    <div id="chartCenterText">Progress</div>
+                                </div>
+                            </div>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </aside>
+    </div>
+   
+<div id="contentArea" class="contentArea1 contentArea">
+    <div class="newteam">
+        
+        <div class="search-button">
+            <div class="searchbar">
+                <div class="input-group overflow-hidden">
+                    <span class="input-group-text bg-white border-2">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                    <input type="text" class="form-control border-2" placeholder="search">
+                </div>
+            </div>
+            <div class="viewteam">
+                <button id="view_team" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >view teams</button>
+                
+            </div>
+        </div>
+    </div>
+    <div class="contentText">
+        <div class="container">
+            <div class="progress-box">
+                <!-- JSON Here! -->
+            </div>
+        </div>
+    </div>
+    <div class="progressmodal" id="progressmodal-name" style="display: none;">
+        <div class="progressmodal-sandbox"></div>
+        <div class="progressmodal-box">
+            <div class="progressmodal-body">
+                <h2 class="inner-title"></h2>
+                <table id="modaltable">
+                    <thead>
+                        <tr>
+                            <th>Task Name</th>
+                            <th>Accountability</th>
+                            <th>Assignee</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!--<tr>
+                            <td class="taskname"></td>
+                            <td class="acc"></td>
+                            <td class="ass"></td>
+                            <td class="stat"></td>
+                        </tr>-->
+                    </tbody>
+                </table>
+                <br>
+                <!--<h2 class="inner-title"></h2>
+                <div class="inner-text"></div>-->
+                <button class="prev-post">Previous</button>
+                <button class="next-post">Next</button>
+                <button class="close-post">Close</button>
+            </div>
+        </div>
+    </div>    
+</div>
+
+        <!-- Placeholder for modal -->
+        <div id="modal-placeholder"></div>
+        <div id="jmodal-placeholder"></div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../assests/assests/js/main.js"></script>
+        <script src="../assests/assests/js/sidebar.js"></script>
+        <script src="../assests/assests/js/header.js"></script>
+        <script src="../assests/assests/js/list-view.js"></script>
+        <script src="../assests/assests/js/bootstrap.bundle.min.js"></script>
+        <script src="../assests/assests/js/teamprogress.js"></script>
+
+        <script>
+
+        $(document).ready(function () {
+            $('#modal-placeholder').load('addsubtask.html');
+            $('#jmodal-placeholder').load('addtask.html');
+
+            $(document).on('click', '#cust_btn', function () {
+                $('#addSubTaskModal').modal('show');
+            });
+
+            $(document).on('click', '#cust_task', function () {
+                $('#addTaskModal').modal('show');
+            });
+        });
+
+        </script>
+    </body>
+</html>
