@@ -1,0 +1,289 @@
+.contentText {
+  transition: all 0.3s ease-out;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: row;
+}
+
+.heading3 {
+  color: #262626;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.small {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #666666;
+
+  &.small {
+    font-size: 14px;
+  }
+}
+
+.go-corner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  top: 0;
+  right: 0;
+  background-color: #6495ED;
+  border-radius: 0 4px 0 32px;
+}
+
+.go-arrow {
+  margin-top: -4px;
+  margin-right: -4px;
+  color: white;
+  font-family: courier, sans;
+}
+
+.card1 {
+  display: block;
+  position: relative;
+  background-color: #f2f8f9;
+  border-radius: 4px;
+  padding: 5px 10px;
+  margin: 12px;
+  text-decoration: none;
+  z-index: 0;
+  overflow: hidden;
+  width: calc(33.333% - 24px); /* 3 per row, with spacing */
+  box-sizing: border-box;
+
+  
+
+  &:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: -16px;
+    right: -16px;
+    background: #6495ED;
+    height: 32px;
+    width: 32px;
+    border-radius: 32px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+    text-decoration: none;
+  }
+
+  &:hover:before {
+    transform: scale(21);
+  }
+}
+
+.card1:hover {
+  .small {
+    transition: all 0.3s ease-out;
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .heading3 {
+    transition: all 0.3s ease-out;
+    color: #ffffff;
+  }
+}
+.percent {
+  position: relative;
+}
+
+.card1 svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(-90deg);
+}
+
+.card1 svg circle {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: #bbb8b8;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.card1 svg circle:last-of-type {
+  stroke-dasharray: 408px;
+  stroke-dashoffset: calc(408px - (408px * var(--percent)) / 100);
+  stroke: #3498db; 
+}
+
+.number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.number h3 {
+  font-weight: 200;
+  font-size: 2rem;
+}
+
+.number h3 span {
+  font-size: 2rem;
+}
+
+.title h2 {
+  margin: 25px 0 0;
+}
+
+.card1 svg circle:last-of-type {
+  stroke: #0a0f2cb5;
+}
+
+.progressmodal,
+.progressmodal-box {
+  z-index: 900;
+}
+
+.progressmodal-sandbox {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.progressmodal {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background: #c8c7c4;
+  overflow: auto;
+}
+.progress-box{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.progressmodal-box {
+  position: relative;
+  width: 80%;
+  max-width: 920px;
+  margin: 100px auto;
+  background: #FFFFFF;
+  animation-name: modalbox;
+  animation-duration: .3s;
+  animation-timing-function: ease-out;
+}
+
+.progressmodal-header img {
+  width: 100%;
+}
+
+.progressmodal-body {
+  padding: 60px 8%;
+}
+
+.progressmodal-body h2 {
+  margin-bottom: 30px;
+  letter-spacing: .06em;
+}
+
+.progressmodal-body p {
+  font-size: .9em;
+  line-height: 1.5em;
+}
+
+@-webkit-keyframes progressmodalbox {
+  0% {
+    top: -250px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes progressmodalbox {
+  0% {
+    top: -250px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.progressmodalbutton {
+  min-width: 120px;
+  top: 50%;
+  left: 50%;
+  padding: 16px 32px;
+  margin: 24px 8px 0 0;
+  background: transparent;
+  text-decoration: none;
+  border: 1px solid #FFC107;
+  outline: none;
+  color: #FFC107;
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: .4;
+  cursor: auto;
+}
+
+@media (max-width: 620px) {
+  .progressmodalbutton {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+.arrow{
+    background-color: #6495ED;
+    border: none;
+}
+.prev-post{
+    color: white;
+    background: #0a0f2c;
+}
+.next-post{
+    color: white;
+    background: #0a0f2c;
+}
+.close-post{
+    color: white;
+    background: #0a0f2c;
+}
+.newteam{
+    display: flex;
+    justify-content:end;
+    padding: 10px;
+    margin-bottom: 16px;
+}
+.viewteam{
+    padding-left: 20px;
+}
