@@ -124,7 +124,7 @@
       border-radius: 20px;
       font-size: 12px;
     }
-    .title{
+    .title2{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -151,7 +151,7 @@
              <div class="col-md-6">
                 <label class="form-label">Assigned To</label>
                 <div id="icountries" class="multiselect noselect" data-target="assignedTo">
-                  <div class="title">
+                  <div class="title2">
                     <span class="text" style=" color: #c7cfe0;;">Select</span>
                     
                     <span class="close-icon" style="padding: 4px;">×</span>
@@ -232,13 +232,13 @@
     class Multiselect {
       constructor(selector) {
         this.element = document.querySelector(selector);
-        this.title = this.element.querySelector(".title");
+        this.title2 = this.element.querySelector(".title2");
         this.container = this.element.querySelector(".container");
         this.text = this.element.querySelector(".text");
         this.options = this.container.querySelectorAll("option");
         this.selected = [];
 
-        this.title.addEventListener("click", () => this.toggle());
+        this.title2.addEventListener("click", () => this.toggle());
 
         this.options.forEach((option) => {
           option.addEventListener("click", () => this.select(option));

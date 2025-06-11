@@ -1,0 +1,363 @@
+.badges{
+    position: relative;
+    font-size: 100% !important;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-left: 15px !important;
+    padding-right: 10px !important;
+}
+
+ .dot {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: currentColor;
+    border-radius: 50%;
+}
+.custom-badge-On-process {
+    background-color: rgba(39, 187, 228, 0.2)!important;
+    color: #17a2b8 !important;
+}
+.custom-badge-To-do {
+    background-color: rgba(229, 127, 127, 0.2)!important;
+    color: #df6666 !important;
+}
+
+.custom-badge-Completed {
+    background-color: rgba(39, 228, 89, 0.2)!important;
+    color: #17b855 !important;
+}
+
+.custom-badge-On-hold {
+    background-color: rgba(229, 189, 104, 0.2)!important;
+    color: #b88017 !important;
+}
+.prioritybadges{
+    position: relative;
+    font-size: 100% !important;
+    color: white !important;
+    padding: 4px 10px !important;
+}
+.custom-badge-Low {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+}
+.custom-badge-High {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+.custom-badge-Medium {
+    background: linear-gradient(45deg, #ffcc70, #ffb347);
+}
+.firsthead{
+    display: flex
+;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.firstsub{
+    display: flex
+;
+    flex-direction: row;
+    gap: 40px
+}
+.created{
+    margin-right: 20px;
+}
+.tbody .tr{
+    font-size: 14px;
+}
+.tableview{
+    width: 80%;
+    margin-top: 50px;
+}
+
+ .content-section {
+            padding: 0;
+        }
+
+        .tableview {
+            width: 80%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        .singlerow {
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .singlerow:last-child {
+            border-bottom: none;
+        }
+
+        .singlerow:hover {
+            background-color: #f8fafc;
+        }
+
+        .labelrow {
+            font-size: 14px;
+            font-weight: 600;
+            color: #374151;
+            padding: 20px 40px;
+            background-color: #f9fafb;
+            width: 200px;
+            border-right: 1px solid #f1f5f9;
+            vertical-align: top;
+        }
+
+        .singlerow td:last-child {
+            padding: 20px 40px;
+            font-size: 14px;
+            color: #1e293b;
+            font-weight: 400;
+            vertical-align: top;
+            text-align: start;
+        }
+
+        .assignee-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .assignee-tag {
+            background-color: #f1f5f9;
+            color: #475569;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            border: 1px solid #e2e8f0;
+        }
+
+        .github-link {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .github-link:hover {
+            color: #1d4ed8;
+            text-decoration: underline;
+        }
+
+        .value-highlight {
+            font-weight: 500;
+            color: #0f172a;
+        }
+
+        .date-value {
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            font-size: 13px;
+            color: #475569;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 16px;
+            }
+
+            .header-section {
+                padding: 24px 20px;
+            }
+
+            .task-title {
+                font-size: 20px;
+            }
+
+            .firsthead {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 16px;
+            }
+
+            .firstsub {
+                gap: 20px;
+            }
+
+            .labelrow {
+                width: 140px;
+                padding: 16px 20px;
+                font-size: 13px;
+            }
+
+            .singlerow td:last-child {
+                padding: 16px 20px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tableview {
+                font-size: 12px;
+            }
+
+            .labelrow {
+                width: 120px;
+                padding: 12px 16px;
+            }
+
+            .singlerow td:last-child {
+                padding: 12px 16px;
+            }
+
+            .assignee-container {
+                flex-direction: column;
+                gap: 4px;
+            }
+        }
+  .subtasks-container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-top: 4px;
+        }
+
+        .subtask-item {
+            padding: 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            background-color: #fafbfc;
+            
+        }
+
+        .subtask-header {
+            margin-bottom: 8px;
+
+        }
+         .subtask-header1 {
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .checkbox-container input[type="checkbox"] {
+            display: none;
+        }
+
+        .checkmark {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #cbd5e1;
+            border-radius: 3px;
+            margin-right: 10px;
+            position: relative;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .checkbox-container input[type="checkbox"]:checked + .checkmark {
+            background-color: #2563eb;
+            border-color: #2563eb;
+        }
+
+        .checkbox-container input[type="checkbox"]:checked + .checkmark::after {
+            content: '';
+            position: absolute;
+            left: 5px;
+            top: 2px;
+            width: 4px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        .subtask-name {
+            color: #374151;
+            transition: all 0.2s ease;
+        }
+
+        .checkbox-container input[type="checkbox"]:checked + .checkmark + .subtask-name {
+            text-decoration: line-through;
+            color: #9ca3af;
+        }
+
+        .subtask-dates {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-left: 28px;
+        }
+
+        .date-item {
+            font-size: 12px;
+            color: #6b7280;
+            font-weight: 500;
+        }
+
+        .date-item .date-value {
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, monospace;
+            font-size: 11px;
+            color: #475569;
+            font-weight: 400;
+        }
+
+        @media (max-width: 768px) {
+            .subtask-dates {
+                flex-direction: column;
+                gap: 4px;
+                margin-left: 28px;
+            }
+
+            .date-item {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .tableview {
+                font-size: 12px;
+            }
+
+            .labelrow {
+                width: 120px;
+                padding: 12px 16px;
+            }
+
+            .singlerow td:last-child {
+                padding: 12px 16px;
+            }
+
+            .assignee-container {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .subtasks-container {
+                gap: 12px;
+            }
+
+            .subtask-item {
+                padding: 10px;
+            }
+
+            .subtask-dates {
+                margin-left: 24px;
+                gap: 2px;
+            }
+
+            .date-item {
+                font-size: 10px;
+            }
+        }
+    .detailhead{
+        padding: 20px;
+    }
+    .commentbox{
+        width: 100%;
+    }
+    .secondsub{
+        display: flex;
+    }

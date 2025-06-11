@@ -9,7 +9,7 @@ var post={
     Taskaccountability:"Accountablility: John D.",
     Personaccountable:"Harini",
     Taskprogress:"25",
-    Taskassignee:"Harish",
+    Taskassignee:"Harish,bavya",
     Startdate:"05/06/2025",
     Promiseddate:"20/11/2025",
     assigneeimg:""
@@ -24,7 +24,7 @@ var post={
     Taskaccountability:"Accountablility: Harini",
     Personaccountable:"Harini",
     Taskprogress:"10",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Naveen,Surya,subha",
     Startdate:"01/08/2019",
     Promiseddate:"07/08/2019",
     assigneeimg:""
@@ -54,7 +54,7 @@ var post={
     Taskaccountability:"Accountablility: hema",
     Personaccountable:"Hema",
     Taskprogress:"100",
-    Taskassignee:"charles stone",
+    Taskassignee:"charles,stone",
     Startdate:"09/01/2020",
     Promiseddate:"09/10/2020",
     assigneeimg:""
@@ -84,7 +84,7 @@ var post={
     Taskaccountability:"Accountablility: Hariprasath",
     Personaccountable:"Hariprasath",
     Taskprogress:"30",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Tavisha,Muthu,Kavitha",
     Startdate:"11/09/2020",
     Promiseddate:"22/09/2020",
     assigneeimg:""
@@ -114,7 +114,7 @@ var post={
     Taskaccountability:"Accountablility: Anushree",
     Personaccountable:"Anushree",
     Taskprogress:"50",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Aashik,Mithun",
     Startdate:"14/06/2019",
     Promiseddate:"10/07/2019",
     assigneeimg:""
@@ -129,7 +129,7 @@ var post={
     Taskaccountability:"Accountablility: Aravindhan",
     Personaccountable:"Aravindhan",
     Taskprogress:"30",
-    Taskassignee:"helen collins",
+    Taskassignee:"helen ,collins",
     Startdate:"01/08/2019",
     Promiseddate:"11/11/2019",
     assigneeimg:""
@@ -159,7 +159,7 @@ var post={
     Taskaccountability:"Accountablility: Anushka",
     Personaccountable:"Anushka",
     Taskprogress:"0",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Ram,madhuja,haridhra",
     Startdate:"01/08/2019",
     Promiseddate:"15/05/2019",
     assigneeimg:""
@@ -189,7 +189,7 @@ var post={
     Taskaccountability:"Accountablility: John D.",
     Personaccountable:"Harini",
     Taskprogress:"25",
-    Taskassignee:"Harish",
+    Taskassignee:"Harish,bavya",
     Startdate:"05/06/2025",
     Promiseddate:"20/11/2025",
     assigneeimg:""
@@ -204,7 +204,7 @@ var post={
     Taskaccountability:"Accountablility: Harini",
     Personaccountable:"Harini",
     Taskprogress:"10",
-    Taskassignee:"Unassigned",
+    Taskassignee:"lajju,tavisha",
     Startdate:"01/08/2019",
     Promiseddate:"07/08/2019",
     assigneeimg:""
@@ -294,7 +294,7 @@ var post={
     Taskaccountability:"Accountablility: Anushree",
     Personaccountable:"Anushree",
     Taskprogress:"50",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Aashik,Mithun",
     Startdate:"14/06/2019",
     Promiseddate:"10/07/2019",
     assigneeimg:""
@@ -309,7 +309,7 @@ var post={
     Taskaccountability:"Accountablility: Aravindhan",
     Personaccountable:"Aravindhan",
     Taskprogress:"30",
-    Taskassignee:"helen collins",
+    Taskassignee:"helen ,collins",
     Startdate:"01/08/2019",
     Promiseddate:"11/11/2019",
     assigneeimg:""
@@ -339,7 +339,7 @@ var post={
     Taskaccountability:"Accountablility: Anushka",
     Personaccountable:"Anushka",
     Taskprogress:"0",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Ram,madhuja,haridhra",
     Startdate:"01/08/2019",
     Promiseddate:"15/05/2019",
     assigneeimg:""
@@ -385,7 +385,8 @@ for(let i=0;i<todolength;i++){
                     '<div class="dropdown" data-bs-theme="light">'+
                         '<i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false">'+'</i>'+
                         '<ul class="dropdown-menu " style="text-align: left;">'+
-                            '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-folder-open bicon">'+'</i>'+'Task Detail'+'</a>'+'</li>'+
+                            '<li>'+'<a class="dropdown-item" href="../pages/detailedview.html" onclick="openDetailFromBoard(' + i + ', \'todo\')">' +
+  '<i class="fa-solid fa-folder-open bicon"></i>Task Detail</a>'+'</li>'+
                             '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-pen bicon">'+'</i>'+'Edit Task'+'</a>'+'</li>'+
                             '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-trash bicon">'+'</i>'+'Delete Task'+'</a>'+'</li>'+
                         '</ul>'+
@@ -444,8 +445,9 @@ for(let i=0;i<inprocesslen;i++){
                     '<div class="dropdown" data-bs-theme="light">'+
                         '<i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false">'+'</i>'+
                         '<ul class="dropdown-menu " style="text-align: left;">'+
-                            '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-folder-open bicon">'+'</i>'+'Task Detail'+'</a>'+'</li>'+
-                            '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-pen bicon">'+'</i>'+'Edit Task'+'</a>'+'</li>'+
+                            
+                            '<li>'+'<a class="dropdown-item" href="../pages/detailedview.html" onclick="openDetailFromBoard(' + i + ', \'inprocess\')">' +
+  '<i class="fa-solid fa-folder-open bicon"></i>Task Detail</a>'+'</li>'+
                             '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-trash bicon">'+'</i>'+'Delete Task'+'</a>'+'</li>'+
                         '</ul>'+
                     '</div>'+
@@ -503,7 +505,8 @@ for(let i=0;i<completedlen;i++){
                     '<div class="dropdown" data-bs-theme="light">'+
                         '<i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false">'+'</i>'+
                         '<ul class="dropdown-menu " style="text-align: left;">'+
-                            '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-folder-open bicon">'+'</i>'+'Task Detail'+'</a>'+'</li>'+
+                            '<li>'+'<a class="dropdown-item" href="../pages/detailedview.html" onclick="openDetailFromBoard(' + i + ', \'completed\')">' +
+  '<i class="fa-solid fa-folder-open bicon"></i>Task Detail</a>'+'</li>'+
                             '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-pen bicon">'+'</i>'+'Edit Task'+'</a>'+'</li>'+
                             '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-trash bicon">'+'</i>'+'Delete Task'+'</a>'+'</li>'+
                         '</ul>'+
@@ -563,7 +566,8 @@ for(let i=0;i<onholdlength;i++){
                     '<div class="dropdown" data-bs-theme="light">'+
                         '<i class="fas fa-ellipsis-h" role="button" data-bs-toggle="dropdown" aria-expanded="false">'+'</i>'+
                         '<ul class="dropdown-menu " style="text-align: left;">'+
-                            '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-folder-open bicon">'+'</i>'+'Task Detail'+'</a>'+'</li>'+
+                            '<li>'+'<a class="dropdown-item" href="../pages/detailedview.html" onclick="openDetailFromBoard(' + i + ', \'onhold\')">' +
+  '<i class="fa-solid fa-folder-open bicon"></i>Task Detail</a>'+'</li>'+
                             '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-pen bicon">'+'</i>'+'Edit Task'+'</a>'+'</li>'+
                             '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-trash bicon">'+'</i>'+'Delete Task'+'</a>'+'</li>'+
                         '</ul>'+
@@ -653,7 +657,7 @@ var postlist=[
     Taskaccountability:"Accountablility: Harini",
     Personaccountable:"Harini",
     Taskprogress:"10",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Naveen,Surya,subha",
     Startdate:"01/08/2019",
     Promiseddate:"07/08/2019",
     assigneeimg:""
@@ -682,7 +686,7 @@ var postlist=[
     Taskaccountability:"Accountablility: Anushree",
     Personaccountable:"Anushree",
     Taskprogress:"50",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Aashik,Mithun",
     Startdate:"14/06/2019",
     Promiseddate:"10/07/2019",
     assigneeimg:""
@@ -712,7 +716,7 @@ var postlist=[
     Taskaccountability:"Accountablility: Aravindhan",
     Personaccountable:"Aravindhan",
     Taskprogress:"30",
-    Taskassignee:"helen collins",
+    Taskassignee:"helen ,collins",
     Startdate:"01/08/2019",
     Promiseddate:"11/11/2019",
     assigneeimg:""
@@ -727,7 +731,7 @@ var postlist=[
     Taskaccountability:"Accountablility: John D.",
     Personaccountable:"Harini",
     Taskprogress:"25",
-    Taskassignee:"Harish",
+    Taskassignee:"Harish,bavya",
     Startdate:"05/06/2025",
     Promiseddate:"20/11/2025",
     assigneeimg:""
@@ -757,7 +761,7 @@ var postlist=[
     Taskaccountability:"Accountablility: Anushree",
     Personaccountable:"Anushree",
     Taskprogress:"50",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Aashik,Mithun",
     Startdate:"14/06/2019",
     Promiseddate:"10/07/2019",
     assigneeimg:""
@@ -772,7 +776,7 @@ var postlist=[
     Taskaccountability:"Accountablility: Anushka",
     Personaccountable:"Anushka",
     Taskprogress:"0",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Ram,madhuja,haridhra",
     Startdate:"01/08/2019",
     Promiseddate:"15/05/2019",
     assigneeimg:""
@@ -832,7 +836,7 @@ var postlist=[
     Taskaccountability:"Accountablility: Anushka",
     Personaccountable:"Anushka",
     Taskprogress:"0",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Ram,madhuja,haridhra",
     Startdate:"01/08/2019",
     Promiseddate:"15/05/2019",
     assigneeimg:""
@@ -877,7 +881,7 @@ var postlist=[
     Taskaccountability:"Accountablility: John D.",
     Personaccountable:"Harini",
     Taskprogress:"25",
-    Taskassignee:"Harish",
+    Taskassignee:"Harish,bavya",
     Startdate:"05/06/2025",
     Promiseddate:"20/11/2025",
     assigneeimg:""
@@ -892,7 +896,7 @@ var postlist=[
     Taskaccountability:"Accountablility: Hariprasath",
     Personaccountable:"Hariprasath",
     Taskprogress:"30",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Tavisha,Muthu,Kavitha",
     Startdate:"11/09/2020",
     Promiseddate:"22/09/2020",
     assigneeimg:""
@@ -938,7 +942,7 @@ var postlist=[
     Taskaccountability:"Accountablility: Hariprasath",
     Personaccountable:"Hariprasath",
     Taskprogress:"30",
-    Taskassignee:"Unassigned",
+    Taskassignee:"Tavisha,Muthu,Kavitha",
     Startdate:"11/09/2020",
     Promiseddate:"22/09/2020",
     assigneeimg:""
@@ -968,7 +972,7 @@ var postlist=[
     Taskaccountability:"Accountablility: Aravindhan",
     Personaccountable:"Aravindhan",
     Taskprogress:"30",
-    Taskassignee:"helen collins",
+    Taskassignee:"helen ,collins",
     Startdate:"01/08/2019",
     Promiseddate:"11/11/2019",
     assigneeimg:""
@@ -1022,7 +1026,7 @@ var tableBody = document.querySelector("#taskTable tbody");
             '<span>&#8942;</span>' +
           '</a>' +
           '<ul class="dropdown-menu dropdown-menu-dark subcol" style="padding: 0px; text-align: left;" aria-labelledby="navbarDarkDropdownMenuLink">' +
-            '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-folder-open bicon givespace"></i>Task Detail</a></li>' +
+            '<li><a class="dropdown-item" href="../pages/detailedview.html" onclick="openDetailFromList(' + i + ')"><i class="fa-solid fa-folder-open bicon givespace"></i>Task Detail</a></li>' +
             '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-pen bicon givespace"></i>Edit Task</a></li>' +
             '<li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#addSubTaskModal" id="cust_btn"><i class="fa-solid fa-plus bicon givespace"></i>Add Subtask</a></li>' +
             '<li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash bicon givespace"></i>Delete Task</a></li>' +
@@ -1033,4 +1037,17 @@ var tableBody = document.querySelector("#taskTable tbody");
   }
 
   tableBody.innerHTML = rows;
+
+function openDetailFromList(index) {
+  localStorage.setItem("selectedTaskFromList", JSON.stringify(postlist[index]));
+}
+function openDetailFromBoard(index, type) {
+  let task;
+  if (type === 'todo') task = post.todo[index];
+  else if (type === 'inprocess') task = post.inprocess[index];
+  else if (type === 'onhold') task = post.onhold[index];
+  else if (type === 'completed') task = post.completed[index];
+
+  localStorage.setItem("selectedTaskFromList", JSON.stringify(task));
+}
 
