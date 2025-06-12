@@ -448,6 +448,7 @@ for(let i=0;i<inprocesslen;i++){
                             
                             '<li>'+'<a class="dropdown-item" href="../pages/detailedview.html" onclick="openDetailFromBoard(' + i + ', \'inprocess\')">' +
   '<i class="fa-solid fa-folder-open bicon"></i>Task Detail</a>'+'</li>'+
+  '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-pen bicon">'+'</i>'+'Edit Task'+'</a>'+'</li>'+ 
                             '<li>'+'<a class="dropdown-item" href="#">'+'<i class="fa-solid fa-trash bicon">'+'</i>'+'Delete Task'+'</a>'+'</li>'+
                         '</ul>'+
                     '</div>'+

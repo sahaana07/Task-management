@@ -247,10 +247,7 @@
                     <td class="labelrow">Due Date</td>
                     <td><span class="date-value">30/07/2024</span></td>
                 </tr>
-                <tr class="singlerow">
-                    <td class="labelrow">Subtask</td>
-                    <td>Frontend Implementation</td>
-                </tr>
+               
                 <tr class="singlerow">
                     <td class="labelrow">Start Date</td>
                     <td><span class="date-value">11/07/2024</span></td>
@@ -400,7 +397,7 @@
     const task = JSON.parse(localStorage.getItem("selectedTaskFromList"));
     if (!task) return;
 
-    // 1. Update header and badges
+   
     const priorityBadge = document.querySelector(".custom-badge-Low");
     const statusBadge = document.querySelector(".custom-badge-On-hold");
 
@@ -414,7 +411,7 @@
       statusBadge.className = "badge rounded-pill custom-badge-" + task.Taskstatus + " badges";
     }
 
-    // 2. Mapping values
+  
     const mapping = {
       "Project Name": task.Projectname,
       "Task Name": task.Taskname,
