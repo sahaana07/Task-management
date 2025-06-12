@@ -634,3 +634,11 @@ flex:start;
 ul{
   padding-left: 0px !important;
 }
+.notification-ui_dd-footer ol {
+        padding-left: 1em;     
+        margin-left: 0;       
+        list-style-position: inside; 
+    }
+.notification-ui_dd-footer ol li::marker {
+  font-weight: bold;
+}
