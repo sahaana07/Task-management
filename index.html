@@ -15,6 +15,7 @@
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="assests/assests/css/dashboard.css"/>
 
   <link rel="stylesheet" href="assests/assests/css/header.css" />
   <link rel="stylesheet" href="assests/assests/css/sidebar.css" />
@@ -42,18 +43,44 @@
 
         <ul class="navbar-nav ms-auto profile-menu">
           <li class="nav-item dropdown m-lg-3">
+                    <button class="btn position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-comment"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
+                    </button>
+                    <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
+                    <li class="notification-ui_dd-header text-center fw-bold">Notifications</li>
+                    <li class="notification-ui_dd-content">
+                    
+                    </li>
+                    <li class="notification-ui_dd-footer">
+                        <p>web design - assigned by Harini</p>
+                        <hr>
+                        <p>content creation - assigned by Raghu</p>
+                        <hr>
+                        <p>painting - completed</p>
+              </li>
+            </ul>
+          </li>
+           
+          <li class="nav-item dropdown m-lg-3">
             <button class="btn position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"
               aria-expanded="false">
               <i class="fa-solid fa-bell"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
+              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+</span>
             </button>
             <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
-              <li class="notification-ui_dd-header text-center fw-bold">Notifications</li>
+              <li class="notification-ui_dd-header text-center fw-bold">Remainders</li>
               <li class="notification-ui_dd-content">
                
               </li>
               <li class="notification-ui_dd-footer">
-                <a href="#" class="btn btn-success w-100">View All</a>
+                        <strong>Due Today</strong>
+                        <hr>
+                        <ol>
+                          <li>content creation</li>
+                          <li>painting</li>
+                        </ol>
               </li>
             </ul>
           </li>
@@ -136,12 +163,19 @@
                                     </a>
                                 </li>
 
-                                <li class="menu-item">
+                               <li class="menu-item">
+                                   <a href="#" data-bs-toggle="modal" data-bs-target="#yourModalID" id="cust_task">
+                                   <span class="menu-icon"><i class="fa-solid fa-plus"></i></span>
+                                  <span class="menu-title">New Task</span>
+                                   </a>
+                                </li>
+                                 <li class="menu-item">
                                     <a href="./pages/viewteams.html">
                                     <span class="menu-icon"><i class="fa-solid fa-user-plus"></i></span>
                                     <span class="menu-title">Add Team</span>
                                     </a>
                                 </li>
+                                
 
                                 <li class="menu-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="dueDateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -183,21 +217,8 @@
   </div>-->
    
     <div id="contentArea" class="contentArea1 contentArea">
-        <div class="alltasks">
-            <div class="dropdown" data-bs-theme="dark">
-                <a class="nav-link dropdown-toggle subcolour" style="padding: 0 0; padding-left: 25px;font-size: 16px;" href="#"
-                    id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    All Tasks
-                </a>
-                <ul class="dropdown-menu dropdown-menu-dark subcol" style="padding: 0px; text-align: left;"
-                    aria-labelledby="navbarDarkDropdownMenuLink">
-                    <li><a class="dropdown-item" href="#" >To-do</a></li>
-                    <li><a class="dropdown-item" href="#" >In-Process</a></li>
-                    <li><a class="dropdown-item" href="#" >On-hold</a></li>
-                    <li><a class="dropdown-item" href="#" >Completed</a></li>
-                    <li><a class="dropdown-item" href="#" >All Tasks</a></li>
-                </ul>
-            </div>
+        <div class="alltasks " style="justify-content: end;">
+            
             <div class="search-button">
                 <div class="searchbar">
                     <div class="input-group overflow-hidden">
@@ -207,14 +228,115 @@
                         <input type="text" class="form-control border-2" placeholder="search">
                     </div>
                 </div>
-                <div class="addbutton">
-                    <button id="cust_task" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Task</button>
-                </div>
+                
             </div>
 
         </div>
+          <div class="contentText">
+            <div class="dashboard-container">
+    <div class="dashboard-overview">
+      
+      <!-- To-Do Card -->
+      <div class="task-card todo">
+        <div class="card-header">
+          <div class="card-icon">
+            <i class="fas fa-list-check"></i>
+          </div>
+          <div class="card-title">
+            <h3>To-Do</h3>
+            <div class="card-subtitle">Pending Projects</div>
+          </div>
+        </div>
         
+        <div class="task-count">24</div>
+        <div class="count-label">Projects remaining</div>
+      </div>
+
+      <!-- On-Hold Card -->
+      <div class="task-card onhold">
+        <div class="card-header">
+          <div class="card-icon">
+            <i class="fas fa-pause"></i>
+          </div>
+          <div class="card-title">
+            <h3>On-Hold</h3>
+            <div class="card-subtitle">Awaiting Action</div>
+          </div>
+        </div>
+        
+        <div class="task-count">7</div>
+        <div class="count-label">Projects paused</div>
+      </div>
+
+      <!-- In-Process Card -->
+      <div class="task-card inprocess">
+        <div class="card-header">
+          <div class="card-icon">
+            <i class="fas fa-spinner"></i>
+          </div>
+          <div class="card-title">
+            <h3>In-Process</h3>
+            <div class="card-subtitle">Active Work</div>
+          </div>
+        </div>
+        
+        <div class="task-count">15</div>
+        <div class="count-label">Projects in progress</div>
+      </div>
+
+      <!-- Completed Card -->
+      <div class="task-card completed">
+        <div class="card-header">
+          <div class="card-icon">
+            <i class="fas fa-check-circle"></i>
+          </div>
+          <div class="card-title">
+            <h3>Completed</h3>
+            <div class="card-subtitle">Finished Work</div>
+          </div>
+        </div>
+        
+        <div class="task-count">42</div>
+        <div class="count-label">Projects completed</div>
+      </div>
+     
+  </div>
+  <div class="section-title">Overall Progress</div>
+                <div class="progress-chart-container">
+                    <div class="programming-stats">
+                        <div class="chart-container">
+                            <canvas id="myChart" width="200" height="200"></canvas>
+                            <div id="chartCenterText">Progress</div>
+                        </div>
+                        <div class="chart-legend">
+                            <div class="legend-item">
+                                <div class="legend-color todo"></div>
+                                <span>To Do (27%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color onhold"></div>
+                                <span>On Hold (8%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color progress"></div>
+                                <span>In Progress (17%)</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color completed"></div>
+                                <span>Completed (48%)</span>
+                            </div>
+                        </div>
+                    </div>
     </div>
+            </div>
+            <div class="lower">
+              <div>
+
+              </div>
+            </div>
+          </div>
+    </div>
+    
 
 
      <div id="jmodal-placeholder"></div>
@@ -238,6 +360,42 @@
             });
         });
         </script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx = document.getElementById('myChart').getContext('2d');
+
+  const data = {
+    labels: ['To Do', 'On Hold', 'In Progress', 'Completed'],
+    datasets: [{
+      data: [27, 8, 17, 48],
+      backgroundColor: [
+        '#0ea5e9', // To Do
+        '#f59e0b', // On Hold
+        '#6366f1', // In Progress
+        '#10b981'  // Completed
+      ],
+      borderWidth: 5,
+      borderColor: '#fff',
+      hoverOffset: 10,
+      cutout: '70%'
+    }]
+  };
+
+  const config = {
+    type: 'doughnut',
+    data: data,
+    options: {
+      responsive: true,
+      plugins: {
+        legend: {
+          display: false
+        }
+      }
+    }
+  };
+
+  new Chart(ctx, config);
+</script>
 
 </body>
 
