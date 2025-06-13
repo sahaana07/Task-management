@@ -8,21 +8,19 @@
   <link rel="stylesheet" href="../assests/assests/css/main.css" />
   <link rel="stylesheet" href="../assests/assests/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../assests/assests/css/list-view.css" />
-  <link rel="stylesheet" href="../assests/assests/css/board-view.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link href=" https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet"/>
-  <link href="../assests/assests/css/viewteams.css" rel="stylesheet"/>
+  <link href="../assests/assests/css/assignee.css" rel="stylesheet">
 
   <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="../assests/assests/css/header.css" />
   <link rel="stylesheet" href="../assests/assests/css/sidebar.css" />
-  <link rel="stylesheet" href="../assests/assests/css/teamprogress.css"/>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   
@@ -90,7 +88,6 @@
               </li>
             </ul>
           </li>
-
             
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownLg" role="button"
@@ -113,6 +110,31 @@
     </div>
 </nav>
 
+
+
+  <!--<div id="sideMenu" class="sideMenu">
+    <a href="#" class="closeBtn" onclick="closeNav()">×</a>
+    <div class="mainMenu">
+      <div style="padding-bottom: 70px;">
+        <h3>Filters</h3>
+        <a href="#" class="colour" onclick="showFilters('Team Progress')">Team Progress</a>
+        <a href="#" class="colour" onclick="showFilters('Assignee')">Assignee</a>
+        <a href="#" class="colour" onclick="showFilters('Priority')">Priority</a>
+        <a href="#" class="colour" onclick="showFilters('Subtasks Status')">Subtasks Status</a>
+
+        <div class="dropdown" data-bs-theme="dark">
+          <a class="nav-link dropdown-toggle colour" style="padding: 0 0; padding-left: 25px;" href="#"
+            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Due Date
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark col" style="padding: 0px; text-align: left;"
+            aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#" onclick="showContent('Today')">Today</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Tomorrow')">Tomorrow</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Overdue')">Overdue</a></li>
+          </ul>
+        </div>
+      </div>-->
       <div class="layout has-sidebar sidebar">
         <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
             
@@ -164,7 +186,6 @@
                                     <li><a class="dropdown-item" href="due-overdue.html">Overdue</a></li>
                                 </ul>
                             </li>
-
                         </ul>
                     </nav>
                 </div>
@@ -172,70 +193,99 @@
         </aside>
     </div>
    
-<div id="contentArea" class="contentArea1 contentArea">
-    <div class="newteam">
-        <div class="search-button">
-            <div class="searchbar">
-                <div class="input-group overflow-hidden">
-                    <span class="input-group-text bg-white border-2">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" class="form-control border-2" placeholder="search">
+    <div id="contentArea" class="contentArea1 contentArea">
+        <div class="alltasks" style="justify-content: end;">
+            <div class="search-button">
+                <div class="searchbar">
+                    <div class="input-group overflow-hidden">
+                        <span class="input-group-text bg-white border-2">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </span>
+                        <input type="text" class="form-control border-2" placeholder="search">
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="contentText">
+            <div class="assignee">
+                <ul class="assignee-list">
+                        <!--assignees-->
+                </ul>
+                <!--<div class="card">
+        <div class="card-content">
+            <div class="card-image">
+                <div class="card-image-container">
+                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Profile Image">
+                </div>
+                <div class="card-glow"></div>
+            </div>-->
+            
+            <!--<div class="card-info">
+                <h2 class="card-name">Sarah Anderson</h2>
+                <p class="card-title">Product Designer</p>
+                <div class="progress">
+                    <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+                </div>
+                
+                <div class="card-stats">
+                    <div class="stat">
+                        <span class="stat-value">4</span>
+                        <span class="stat-label">Pending</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">10</span>
+                        <span class="stat-label">Completed</span>
+                    </div>
+                </div>
+                
+                <div class="card-actions">
+                    <button class="action-button primary">
+                        <span>Assigned Tasks</span>
+                    </button>
                 </div>
             </div>
-            <div class="addteam">
-                <button id="add_team" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Team</button>
+        </div>
+    </div>-->
+        </div>
+             <div class="progressmodal" id="progressmodal-name" style="display: none;">
+                <div class="progressmodal-sandbox"></div>
+                <div class="progressmodal-box">
+                    <div class="progressmodal-body">
+                        <div class="modal-header">
+                            <div><strong>Name:</strong> <span id="modal-assignee-name"></span></div>
+                            <div><strong>Designation:</strong> <span id="modal-assignee-designation"></span></div>
+                        </div>
+                        <div class="list"><strong>Tasks Assigned:</strong> </div>
+                        <table class="task-table">
+                            <thead>
+                                <tr>
+                                    <th>Task</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="modal-tasks">
+                                <!-- Tasks will appear here -->
+                            </tbody>
+                        </table>
+                        <div class="modal-navigation">
+                            <button class="prev-post">Previous</button>
+                            <button class="next-post">Next</button>
+                            <button class="close-post">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="contentText">
-        <ul class="team-box">
-            <!--list-->
-        </ul>
-        
-    </div>   
-    <div class="pagenav" >
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
-
         <!-- Placeholder for modal -->
-        <div id="tmodal-placeholder"></div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="../assests/assests/js/main.js"></script>
         <script src="../assests/assests/js/sidebar.js"></script>
         <script src="../assests/assests/js/header.js"></script>
         <script src="../assests/assests/js/list-view.js"></script>
         <script src="../assests/assests/js/bootstrap.bundle.min.js"></script>
-        <script src="../assests/assests/js/viewteams.js"></script>
-
-        <script>
-
-        $(document).ready(function () {
-            $('#tmodal-placeholder').load('addteam.html');
-
-            $(document).on('click', '#add_team', function () {
-                $('#addteamModal').modal('show');
-            });
-        });
+        <script src="../assests/assests/js/assignee.js"></script>
 
         </script>
     </body>
