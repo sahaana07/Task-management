@@ -205,8 +205,12 @@
 .noti-btn{
     background-color: #244565; 
     color:#f3f5f7; 
-    border-radius: 21px
-           
+    border-radius: 21px     
+}
+.noti-btn:hover{
+    background-color: #244565; 
+    color:#f3f5f7; 
+    border-radius: 21px     
 }
 .navs{
     background: #0a0f2c;
