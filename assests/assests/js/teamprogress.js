@@ -68,6 +68,76 @@ var progress=[
     accountability2:"priya",
     overallprogress:"10",
     totaltasks:"4 tasks"
+  },
+  {
+    Teamname:"Development",    
+    task1:"painting",
+    task2:"drawing",
+    Projectname:"Project 8",
+    status1:"completed",
+    status2:"On-process",
+    assignee1:"harini",
+    assignee2:"hema",
+    accountability1:"praveen",
+    accountability2:"vishnu",
+    overallprogress:"60",
+    totaltasks:"2 tasks"
+  },
+  {
+    Teamname:"team 2",    
+    task1:"task 1",
+    task2:"task 2",
+    Projectname:"Project 9",
+    status1:"On-hold",
+    status2:"To-do",
+    assignee1:"hari",
+    assignee2:"vishwa",
+    accountability1:"hema",
+    accountability2:"priya",
+    overallprogress:"10",
+    totaltasks:"4 tasks"
+  },
+  {
+    Teamname:"team 3",
+    task1:"Floor 3 pipeline",
+    task2:"task 2",
+    Projectname:"Project 10",
+    status1:"completed",
+    status2:"to-do",
+    assignee1:"prasadh",
+    assignee2:"meena",
+    accountability1:"deepa",
+    accountability2:"bavana",
+    overallprogress:"30",
+    totaltasks:"3 tasks"
+  },
+  {
+    Teamname:"team 4",
+    task1:"Tasks",
+    task2:"task 2",
+    Projectname:"Project 4",
+    status1:"completed",
+    status2:"to-do",
+    assignee1:"prasadh",
+    assignee2:"meena",
+    accountability1:"deepa",
+    accountability2:"bavana",
+    overallprogress:"30",
+    totaltasks:"3 tasks"
+  },
+  {
+    Teamname:"team 5",
+    task1:"Floor 3 pipeline",
+    task2:"task 2",
+    Projectname:"Project 6",
+    status1:"On-hold",
+    status2:"To-do",
+    assignee1:"hari",
+    assignee2:"vishwa",
+    accountability1:"hema",
+    accountability2:"priya",
+    overallprogress:"10",
+    totaltasks:"4 tasks"
   }
 ]
 var progresslen = progress.length;
