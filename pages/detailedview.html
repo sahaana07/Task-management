@@ -31,13 +31,15 @@
 
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark navs">
     <div class="container-fluid">
-      <a href="./index.html" class="navsub">Task-Manager</a>
+      <a href="../index.html" class="navsub">Task-View</a>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navclass">
           <a href="../pages/board.html"  class="navsub me-lg-4">Board</a>
-          <a href="../pages/list.html" class="navsub me-lg-4">List</a>
-          <a href="#" class="navsub me-lg-4">Timeline</a>
+          <a href="../pages/list.html" class="navsub me-lg-4">
+            List</a>
+          <a href="#" class="navsub me-lg-4">
+            </i>Timeline</a>
         </div>
 
         <ul class="navbar-nav ms-auto profile-menu">
@@ -92,7 +94,7 @@
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLg">
               <li><a class="dropdown-item" href="#">Account</a></li>
-              <li><a class="dropdown-item" href="#">Settings</a></li>
+              
               <li>
                 <hr class="dropdown-divider" />
               </li>
@@ -105,6 +107,30 @@
       </div>
     </div>
   </nav>
+  
+  <!--<div id="sideMenu" class="sideMenu">
+    <a href="#" class="closeBtn" onclick="closeNav()">×</a>
+    <div class="mainMenu">
+      <div style="padding-bottom: 70px;">
+        <h3>Filters</h3>
+        <a href="#" class="colour" onclick="showFilters('Team Progress')">Team Progress</a>
+        <a href="#" class="colour" onclick="showFilters('Assignee')">Assignee</a>
+        <a href="#" class="colour" onclick="showFilters('Priority')">Priority</a>
+        <a href="#" class="colour" onclick="showFilters('Subtasks Status')">Subtasks Status</a>
+
+        <div class="dropdown" data-bs-theme="dark">
+          <a class="nav-link dropdown-toggle colour" style="padding: 0 0; padding-left: 25px;" href="#"
+            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Due Date
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark col" style="padding: 0px; text-align: left;"
+            aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item" href="#" onclick="showContent('Today')">Today</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Tomorrow')">Tomorrow</a></li>
+            <li><a class="dropdown-item" href="#" onclick="showContent('Overdue')">Overdue</a></li>
+          </ul>
+        </div>
+      </div>-->
     <div class="layout has-sidebar fixed-sidebar fixed-header">
         <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
         
@@ -125,18 +151,13 @@
                                 </li>
 
                                 <li class="menu-item">
-                                    <a href="../pages/assignee.html">
+                                    <a href="assignee.html">
                                     <span class="menu-icon"><i class="fa-solid fa-people-group"></i></span>
                                     <span class="menu-title">Assignee</span>
                                     </a>
                                 </li>
 
-                                <li class="menu-item">
-                                    <a href="priority.html">
-                                    <span class="menu-icon"><i class="fa-solid fa-arrow-up-wide-short"></i></span>
-                                    <span class="menu-title">Priority</span>
-                                    </a>
-                                </li>
+                                
 
                                 <li class="menu-item">
                                     <a href="../pages/viewteams.html">
@@ -153,9 +174,13 @@
                                     <ul class="dropdown-menu dropdown-menu-dark smalldropdown" aria-labelledby="dueDateDropdown">
                                         <li><a class="dropdown-item" href="due-today.html">Today</a></li>
                                         <li><a class="dropdown-item" href="due-tomorrow.html">Tomorrow</a></li>
-                                        <li><a class="dropdown-item" href="due-overdue.html">Overdue</a></li>
+                                       
                                     </ul>
                                 </li>
+
+                            
+                                
+                                
                             </ul>
                         </nav>
                 </div>
@@ -164,6 +189,7 @@
             </div>
         </aside>
     </div>
+      
    <div class="container-fluid">
     <div id="contentArea" class="contentArea1 contentArea">
        
@@ -343,14 +369,21 @@
    </div>
        
         <div id="jmodal-placeholder"></div>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+       
+
         <script src="../assests/assests/js/main.js"></script>
         <script src="../assests/assests/js/sidebar.js"></script>
         <script src="../assests/assests/js/header.js"></script>
         <script src="../assests/assests/js/list-view.js"></script>
-        <script src="../assests/assests/js/bootstrap.bundle.min.js"></script>
+        
         <script src="../assests/assests/js/jasonscript.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
+        <!-- Popper.js (for dropdown positioning) -->
+       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+
+       <!-- Bootstrap Bundle (includes dropdown support) -->
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script>
 
         $(document).ready(function () {
