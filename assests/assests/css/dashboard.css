@@ -22,25 +22,25 @@
     }
 
     .task-card.todo {
-      --card-color: #2563eb;
+      --card-color: #0ea5e9;
       --card-bg: #eff6ff;
       --card-border-color: #93c5fd;
     }
 
     .task-card.onhold {
-      --card-color: #d97706;
+      --card-color: #f59e0b;
       --card-bg: #fffbeb;
       --card-border-color: #fbbf24;
     }
 
     .task-card.inprocess {
-      --card-color: #7c3aed;
+      --card-color: #6366f1;
       --card-bg: #f5f3ff;
       --card-border-color: #a78bfa;
     }
 
     .task-card.completed {
-      --card-color: #059669;
+      --card-color: #10b981;
       --card-bg: #ecfdf5;
       --card-border-color: #6ee7b7;
     }
@@ -253,19 +253,19 @@
     }
 
     .legend-color.todo {
-  background-color: #2563eb; /* To Do */
+  background-color: #0ea5e9 ; 
 }
 
 .legend-color.onhold {
-  background-color: #d97706; /* On Hold */
+  background-color: #f59e0b; 
 }
 
 .legend-color.progress {
-  background-color: #7c3aed; /* In Progress */
+  background-color: #6366f1;
 }
 
 .legend-color.completed {
-  background-color: #059669; /* Completed */
+  background-color: #10b981; 
 }
 
     /* Section Title */
