@@ -179,7 +179,7 @@ function setupModalHandlers() {
 function showModal(index) {
     const assignee = assignees[index];
     
-    // Update modal content with correct selectors
+    // Update modal content
     $('#modal-assignee-name').text(assignee.assigneename);
     $('#modal-assignee-designation').text(assignee.designation);
     
@@ -198,12 +198,22 @@ function showModal(index) {
         `);
     });
     
+    // Prevent background scrolling
+    $('body').addClass('modal-open');
+    
     // Show modal
     $('#progressmodal-name').show();
     
     // Update navigation buttons state
     updateNavButtons();
 }
+
+// Close modal
+$(document).on('click', '.close-post, .progressmodal-sandbox', function() {
+    $('#progressmodal-name').hide();
+    // Re-enable background scrolling
+    $('body').removeClass('modal-open');
+});
 
 function updateNavButtons() {
     // Disable Previous button if at first item
