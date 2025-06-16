@@ -4,32 +4,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <link rel="stylesheet" href="../assests/assests/css/main.css" />
   <link rel="stylesheet" href="../assests/assests/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../assests/assests/css/list-view.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
   <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="../assests/assests/css/header.css" />
   <link rel="stylesheet" href="../assests/assests/css/duetoday.css"/>
   <link rel="stylesheet" href="../assests/assests/css/sidebar.css" />
-
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-  
   <title>Task-Manager</title>
-  
 </head>
-
 <body>
-
 <nav class="navbar sticky-top navbar-expand-lg navbar-dark navs">
     <div class="container-fluid">
       <a href="../pages/dashboard.html" class="navsub">Task-Manager</a>
@@ -37,14 +28,12 @@
         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navclass">
-          <a href="./board.html"  class="navsub me-lg-4">Board</a>
-          <a href="./list.html" class="navsub active me-lg-4">List</a>
-          <a href="#" class="navsub me-lg-4">Timeline</a>
-        </div>
-
+                <a href="./board.html"  class="navsub me-lg-4">Board</a>
+                <a href="./list.html" class="navsub active me-lg-4">List</a>
+                <a href="#" class="navsub me-lg-4">Timeline</a>
+            </div>
             <ul class="navbar-nav ms-auto profile-menu">
                 <li class="nav-item dropdown m-lg-3">
                     <button class="btn position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"
@@ -53,41 +42,41 @@
                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">99+</span>
                     </button>
                     <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
-                    <li class="notification-ui_dd-header text-center fw-bold">Notifications</li>
-                    <li class="notification-ui_dd-content">
-                    
-                    </li>
-                    <li class="notification-ui_dd-footer">
-                        <p>web design - assigned by Harini</p>
-                        <hr>
-                        <p>content creation - assigned by Raghu</p>
-                        <hr>
-                        <p>painting - completed</p>
-              </li>
-            </ul>
-          </li>
+                        <li class="notification-ui_dd-header text-center fw-bold">Notifications</li>
+                        <li class="notification-ui_dd-content">
+                        
+                        </li>
+                        <li class="notification-ui_dd-footer">
+                            <p>web design - assigned by Harini</p>
+                            <hr>
+                            <p>content creation - assigned by Raghu</p>
+                            <hr>
+                            <p>painting - completed</p>
+                        </li>
+                    </ul>
+                </li>
            
-          <li class="nav-item dropdown m-lg-3">
-            <button class="btn position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"
-              aria-expanded="false">
-              <i class="fa-solid fa-bell"></i>
-              <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+</span>
-            </button>
-            <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
-              <li class="notification-ui_dd-header text-center fw-bold">Remainders</li>
-              <li class="notification-ui_dd-content">
-               
-              </li>
-              <li class="notification-ui_dd-footer">
-                        <strong>Due Today</strong>
-                        <hr>
-                        <ol>
-                          <li>content creation</li>
-                          <li>painting</li>
-                        </ol>
-              </li>
-            </ul>
-          </li>
+                <li class="nav-item dropdown m-lg-3">
+                    <button class="btn position-relative noti-btn" id="dropdownMenuButton1" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="fa-solid fa-bell"></i>
+                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">9+</span>
+                    </button>
+                    <ul class="dropdown-menu notification-ui_dd" aria-labelledby="dropdownMenuButton1">
+                        <li class="notification-ui_dd-header text-center fw-bold">Remainders</li>
+                        <li class="notification-ui_dd-content">
+                        
+                        </li>
+                        <li class="notification-ui_dd-footer">
+                            <strong>Due Today</strong>
+                            <hr>
+                            <ol>
+                                <li>content creation</li>
+                                <li>painting</li>
+                            </ol>
+                        </li>
+                    </ul>
+                </li>
             
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownLg" role="button"
@@ -96,15 +85,12 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLg">
                     <li><a class="dropdown-item" href="../pages/profile.html">Account</a></li>
-                  
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
                     <li><a class="dropdown-item" href="/index.html">Log Out</a></li>
                     </ul>
                 </li>
-            
-
             </ul>
         </div>
     </div>
@@ -112,11 +98,8 @@
 
       <div class="layout has-sidebar sidebar">
         <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
-            
             <a id="btn-collapse" class="sidebar-collapser" onclick="togglefunction()"><i class="ri-arrow-left-s-line"></i></a>
-            
             <div class="sidebar-layout">
-            
                 <div class="sidebar-content">
                     <nav class="menu open-current-submenu">
                         <ul>
@@ -128,23 +111,18 @@
                                 <span class="menu-title">Team Progress</span>
                                 </a>
                             </li>
-
                             <li class="menu-item">
                                 <a href="../pages/assignee.html">
                                 <span class="menu-icon"><i class="fa-solid fa-people-group"></i></span>
                                 <span class="menu-title">Assignee</span>
                                 </a>
                             </li>
-
-                          
-
                             <li class="menu-item">
                                 <a href="../pages/viewteams.html">
                                 <span class="menu-icon"><i class="fa-solid fa-user-plus"></i></i></span>
                                 <span class="menu-title">Add Team</span>
                                 </a>
                             </li>
-                            
                             <li class="menu-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="dueDateDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="menu-icon"><i class="ri-calendar-event-fill"></i></span>
@@ -153,7 +131,6 @@
                                 <ul class="dropdown-menu dropdown-menu-dark smalldropdown" aria-labelledby="dueDateDropdown">
                                     <li><a class="dropdown-item" href="../pages/duetoday.html">Today</a></li>
                                     <li><a class="dropdown-item" href="../pages/duetomorrow.html">Tomorrow</a></li>
-                                   
                                 </ul>
                             </li>
                         </ul>
@@ -176,36 +153,6 @@
             <div class="posts-today">
                 <!--today due-->
             </div>
-            <!--<div class="textleft">
-                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
-                <span class="task-text">electric walk-through</span>
-            </div>
-            <hr>
-            <div class="textleft">
-                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
-                <span class="task-text">Painting</span>
-            </div>
-            <hr>
-            <div class="textleft">
-                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
-                <span class="task-text">Floor 3 pipeline</span>
-            </div>
-            <hr>
-            <div class="textleft">
-                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
-                <span class="task-text">Inspect interior</span>
-            </div>
-            <hr>
-            <div class="textleft">
-                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
-                <span class="task-text">Redesign Landing Page</span>
-            </div>
-            <hr>
-            <div class="textleft">
-                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
-                <span class="task-text">Monthly fire</span>
-            </div>
-            <hr>-->
         </div>
     </div>
 
