@@ -20,10 +20,7 @@
   <link rel="stylesheet" href="../assests/assests/css/sidebar.css" />
   <link rel="stylesheet" href="../assests/assests/css/detailedview.css"/>
   <link rel="stylesheet" href="../assests/assests/css/list-view.css">
-
- 
-
-  <title>Sidebar</title>
+  <title>Task-Manager</title>
   
 </head>
 
@@ -31,7 +28,7 @@
 
   <nav class="navbar sticky-top navbar-expand-lg navbar-dark navs">
     <div class="container-fluid">
-      <a href="../pages/dashboard.html" class="navsub">Task-View</a>
+      <a href="../pages/dashboard.html" class="navsub">Task-Manager</a>
 
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navclass">
@@ -90,7 +87,7 @@
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownLg" role="button"
               data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="./images/profile pic.jpg" alt="Profile Picture" class="rounded-circle" width="35" height="35" />
+              <img src="../images/profile pic.jpg" alt="Profile Picture" class="rounded-circle" width="35" height="35" />
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLg">
               <li><a class="dropdown-item" href="../pages/profile.html">Account</a></li>
@@ -108,29 +105,6 @@
     </div>
   </nav>
   
-  <!--<div id="sideMenu" class="sideMenu">
-    <a href="#" class="closeBtn" onclick="closeNav()">×</a>
-    <div class="mainMenu">
-      <div style="padding-bottom: 70px;">
-        <h3>Filters</h3>
-        <a href="#" class="colour" onclick="showFilters('Team Progress')">Team Progress</a>
-        <a href="#" class="colour" onclick="showFilters('Assignee')">Assignee</a>
-        <a href="#" class="colour" onclick="showFilters('Priority')">Priority</a>
-        <a href="#" class="colour" onclick="showFilters('Subtasks Status')">Subtasks Status</a>
-
-        <div class="dropdown" data-bs-theme="dark">
-          <a class="nav-link dropdown-toggle colour" style="padding: 0 0; padding-left: 25px;" href="#"
-            id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Due Date
-          </a>
-          <ul class="dropdown-menu dropdown-menu-dark col" style="padding: 0px; text-align: left;"
-            aria-labelledby="navbarDarkDropdownMenuLink">
-            <li><a class="dropdown-item" href="#" onclick="showContent('Today')">Today</a></li>
-            <li><a class="dropdown-item" href="#" onclick="showContent('Tomorrow')">Tomorrow</a></li>
-            <li><a class="dropdown-item" href="#" onclick="showContent('Overdue')">Overdue</a></li>
-          </ul>
-        </div>
-      </div>-->
     <div class="layout has-sidebar fixed-sidebar fixed-header">
         <aside id="sidebar" class="sidebar break-point-sm has-bg-image">
         
@@ -156,9 +130,6 @@
                                     <span class="menu-title">Assignee</span>
                                     </a>
                                 </li>
-
-                                
-
                                 <li class="menu-item">
                                     <a href="../pages/viewteams.html">
                                     <span class="menu-icon"><i class="fa-solid fa-user-plus"></i></i></span>
@@ -177,15 +148,9 @@
                                        
                                     </ul>
                                 </li>
-
-                            
-                                
-                                
                             </ul>
                         </nav>
                 </div>
-
-          
             </div>
         </aside>
     </div>
@@ -367,10 +332,7 @@
         
     </div>
    </div>
-       
         <div id="jmodal-placeholder"></div>
-       
-
         <script src="../assests/assests/js/main.js"></script>
         <script src="../assests/assests/js/sidebar.js"></script>
         <script src="../assests/assests/js/header.js"></script>
@@ -448,13 +410,7 @@
       assigneeContainer.innerHTML = names.map(name => `<span class="assignee-tag">${name}</span>`).join("");
     }
   });
-  
+
 </script>
-
-
-
-     
-
 </body>
-
 </html>
