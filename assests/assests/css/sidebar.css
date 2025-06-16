@@ -180,7 +180,7 @@ $sidebar-footer-height: 230px;*/
 	 overflow-x: hidden !important;
 	 position: fixed;
      transition: width 0.3s ease;
-     z-index: 999;
+     z-index: 1000;
     height: 100vh;
     display: flex;
     flex-direction: column;

@@ -202,7 +202,9 @@ function showModal(index) {
     $('body').addClass('modal-open');
     
     // Show modal
-    $('#progressmodal-name').show();
+    $('#progressmodal-name').css('display', 'flex');
+    $('body').css('overflow', 'hidden');
+
     
     // Update navigation buttons state
     updateNavButtons();
@@ -210,7 +212,9 @@ function showModal(index) {
 
 // Close modal
 $(document).on('click', '.close-post, .progressmodal-sandbox', function() {
-    $('#progressmodal-name').hide();
+    $('#progressmodal-name').hide();   
+    $('body').css('overflow', '');
+
     // Re-enable background scrolling
     $('body').removeClass('modal-open');
 });
@@ -226,3 +230,4 @@ function updateNavButtons() {
     $('.prev-post').prop('disabled', currentModalIndex === 0);
     $('.next-post').prop('disabled', currentModalIndex === assignees.length - 1);
 }
+

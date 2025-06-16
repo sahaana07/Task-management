@@ -8,21 +8,19 @@
   <link rel="stylesheet" href="../assests/assests/css/main.css" />
   <link rel="stylesheet" href="../assests/assests/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../assests/assests/css/list-view.css" />
-  <link rel="stylesheet" href="../assests/assests/css/board-view.css"/>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <link href=" https://fonts.googleapis.com/css?family=Nunito:400,700" rel="stylesheet"/>
-  <link href="../assests/assests/css/viewteams.css" rel="stylesheet"/>
 
   <script src="https://kit.fontawesome.com/013d690cc7.js" crossorigin="anonymous"></script>
 
   <link rel="stylesheet" href="../assests/assests/css/header.css" />
+  <link rel="stylesheet" href="../assests/assests/css/duetoday.css"/>
   <link rel="stylesheet" href="../assests/assests/css/sidebar.css" />
-  <link rel="stylesheet" href="../assests/assests/css/teamprogress.css"/>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
   
@@ -90,7 +88,6 @@
               </li>
             </ul>
           </li>
-
             
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownLg" role="button"
@@ -99,7 +96,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownLg">
                     <li><a class="dropdown-item" href="../pages/profile.html">Account</a></li>
-                   
+                  
                     <li>
                         <hr class="dropdown-divider" />
                     </li>
@@ -139,7 +136,7 @@
                                 </a>
                             </li>
 
-                            
+                          
 
                             <li class="menu-item">
                                 <a href="../pages/viewteams.html">
@@ -159,7 +156,6 @@
                                    
                                 </ul>
                             </li>
-
                         </ul>
                     </nav>
                 </div>
@@ -167,68 +163,69 @@
         </aside>
     </div>
    
-<div id="contentArea" class="contentArea1 contentArea">
-    <div class="newteam">
-        <div class="search-button">
-            <div class="searchbar">
-                <div class="input-group overflow-hidden">
-                    <span class="input-group-text bg-white border-2">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                    </span>
-                    <input type="text" class="form-control border-2" placeholder="search">
+    <div id="contentArea" class="contentArea1 contentArea">
+        <div class="alltasks">
+            <div class="search-button">
+                <div class="addbutton">
+                    <button id="cust_task" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Task</button>
                 </div>
             </div>
-            <div class="addteam">
-                <button id="add_team" class="btn rounded-pill buttoncol" type="button" data-bs-toggle="modal"  >+ New Team</button>
+        </div>
+        <div class="contentText" style="padding-right: 30px;">
+            <h1 class="textleft">Today</h1><br>
+            <div class="posts-today">
+                <!--today due-->
             </div>
+            <!--<div class="textleft">
+                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
+                <span class="task-text">electric walk-through</span>
+            </div>
+            <hr>
+            <div class="textleft">
+                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
+                <span class="task-text">Painting</span>
+            </div>
+            <hr>
+            <div class="textleft">
+                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
+                <span class="task-text">Floor 3 pipeline</span>
+            </div>
+            <hr>
+            <div class="textleft">
+                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
+                <span class="task-text">Inspect interior</span>
+            </div>
+            <hr>
+            <div class="textleft">
+                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
+                <span class="task-text">Redesign Landing Page</span>
+            </div>
+            <hr>
+            <div class="textleft">
+                <button class="circle-btn" onclick="window.location.href='../pages/detailedview.html'"></button>
+                <span class="task-text">Monthly fire</span>
+            </div>
+            <hr>-->
         </div>
     </div>
-    <div class="contentText">
-        <ul class="team-box">
-            <!--list-->
-        </ul>
-        
-    </div>   
-    <div class="pagenav" >
-        <nav aria-label="Page navigation example">
-            <ul class="pagination">
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Previous">
-                        <span aria-hidden="true">&laquo;</span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item"><a class="page-link" href="#">2</a></li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                    <a class="page-link" href="#" aria-label="Next">
-                        <span aria-hidden="true">&raquo;</span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</div>
 
         <!-- Placeholder for modal -->
-        <div id="tmodal-placeholder"></div>
+        <div id="jmodal-placeholder"></div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="../assests/assests/js/main.js"></script>
         <script src="../assests/assests/js/sidebar.js"></script>
         <script src="../assests/assests/js/header.js"></script>
         <script src="../assests/assests/js/list-view.js"></script>
         <script src="../assests/assests/js/bootstrap.bundle.min.js"></script>
-        <script src="../assests/assests/js/viewteams.js"></script>
+        <script src="../assests/assests/js/due.js"></script>
 
         <script>
 
         $(document).ready(function () {
-            $('#tmodal-placeholder').load('addteam.html');
+            $('#jmodal-placeholder').load('addtask.html');
 
-            $(document).on('click', '#add_team', function () {
-                $('#addteamModal').modal('show');
+            $(document).on('click', '#cust_task', function () {
+                $('#addTaskModal').modal('show');
             });
         });
 
